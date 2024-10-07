@@ -2,7 +2,7 @@
 A really really easy way to test various prompts in various models
 
 ## Usage
-Put your prompts in the prompt file, the models you want to run in your model file. You can't use a model with "/" in it, otherwise you need to put a folders with the names of the left part.
+Put your prompts in the prompt file, the models you want to run in your model file. You can't use a model with "/" in it, otherwise you need to put a folder(s) with the name(s) of the left part.
 
 Every prompt is it's own line, so is every model. 
 
