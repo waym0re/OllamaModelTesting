@@ -15,6 +15,6 @@ The output has 3 tests of each prompt for each model.
 
 ## Warning: New runs squish the old output
 
-### There's probably a lot of optimisations and variants (not squish the old output, have the number of runs as a parameter, etc.) But I'm lazy in a min-max way, and this form is probably the easiest to modify and adapt, so don't expect any improvements.
+###### There's probably a lot of optimisations and variants (not squish the old output, have the number of runs as a parameter, etc.) But I'm lazy in a min-max way, and this form is probably the easiest to modify and adapt, so don't expect any improvements.
 
 All code is GPLv3. MIT or BSD type licenses available for $.
