@@ -1,0 +1,47 @@
+ Proving that \(e\) (Euler's number, approximately 2.71828...) is transcendental involves showing that it is not a root of any non-zero polynomial equation with rational coefficients. This was first proved by Charles Hermite in 1873. The proof is quite technical and involves some advanced mathematical concepts, but I'll provide an outline of the main steps involved:
+
+### Proof Outline
+
+1. **Assume \(e\) is Algebraic**: Suppose that \( e \) is a root of a non-zero polynomial with rational coefficients, say \( P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 \), where each \( a_i \in \mathbb{Q} \).
+
+2. **Clear Denominators**: Without loss of generality, we can assume that all coefficients \(a_i\) are integers by multiplying the polynomial by an appropriate integer. So, let’s write:
+   \[
+   P(x) = b_n x^n + b_{n-1} x^{n-1} + \cdots + b_0
+   \]
+   where \(b_i \in \mathbb{Z}\).
+
+3. **Construct an Auxiliary Function**: Consider the function:
+   \[
+   f(x) = \frac{x^p (x - 1)^p (x - 2)^p \cdots (x - n)^p}{(p-1)!}
+   \]
+   for some large prime \( p \). This function is chosen to have certain desirable properties, particularly related to its derivatives.
+
+4. **Define a New Function**: Let:
+   \[
+   F(x) = f^{(0)}(x) + f^{(1)}(x) + \cdots + f^{(n)}(x)
+   \]
+   where \(f^{(k)}(x)\) denotes the k-th derivative of \(f(x)\).
+
+5. **Evaluate at Integers**: Evaluating \( F(x) \) and its derivatives at integer points leads to expressions involving factorials and polynomials in \(e\):
+   \[
+   F^{(j)}(k) = P_j(e, k) + Q_j(e, k) e^{-k}
+   \]
+   where \(P_j\) and \(Q_j\) are polynomials with integer coefficients.
+
+6. **Construct a Polynomial**: Consider the polynomial:
+   \[
+   G(x) = b_n F^{(0)}(x) + b_{n-1} F^{(1)}(x) + \cdots + b_0 F^{(n)}(x)
+   \]
+
+7. **Analyze \(G(e)\)**: Show that \(G(e)\) can be made arbitrarily small for sufficiently large \(p\), but not zero, while also being a non-zero integer (by considering properties of factorials and the behavior of exponentials). This leads to a contradiction.
+
+8. **Conclusion**: Since assuming that \(e\) is algebraic leads to a contradiction, it must be transcendental.
+
+### Key Concepts Involved:
+- Properties of polynomials with rational coefficients.
+- Use of auxiliary functions and their derivatives.
+- Behavior of factorial terms and exponentials.
+- The concept of arbitrarily small non-zero integers leading to a contradiction.
+
+This proof is quite complex and involves deep understanding of polynomial theory, calculus, and properties of integer polynomials. For a full detailed proof, one would typically consult advanced texts in number theory or algebraic geometry.
+

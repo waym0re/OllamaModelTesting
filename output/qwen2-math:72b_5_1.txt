@@ -1,0 +1,44 @@
+
+Here is a cheat sheet for basic topology using LuaLaTeX:
+
+```latex
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, enumerate}
+
+\begin{document}
+
+\section*{Topological Spaces}
+
+\textbf{Definition:} A \textit{topological space} is a set $X$ together with a collection $\tau$ of subsets of $X$, called the \textit{open sets}, that satisfy the following properties:
+\begin{enumerate}
+  \item The empty set $\emptyset$ and the whole set $X$ are open.
+  \item Any union of open sets is open.
+  \item Any finite intersection of open sets is open.
+\end{enumerate}
+
+\textbf{Definition:} A subset $C$ of a topological space $X$ is called \textit{closed} if its complement $X \setminus C$ is open.
+
+\textbf{Theorem:} The collection of closed sets in a topological space $X$ satisfies the following properties:
+\begin{enumerate}
+  \item The empty set $\emptyset$ and the whole set $X$ are closed.
+  \item Any intersection of closed sets is closed.
+  \item Any finite union of closed sets is closed.
+\end{enumerate}
+
+\textbf{Definition:} A point $x$ in a topological space $X$ is called an \textit{interior point} of a set $A$ if there exists an open set $U$ such that $x \in U \subseteq A$. The set of all interior points of $A$ is denoted by $\text{int}(A)$ and is called the \textit{interior} of $A$.
+
+\textbf{Definition:} A point $x$ in a topological space $X$ is called a \textit{limit point} of a set $A$ if every open set containing $x$ intersects $A$ in some point other than $x$. The set of all limit points of $A$ is denoted by $A'$ and is called the \textit{derived set} of $A$.
+
+\textbf{Theorem:} A set $A$ in a topological space $X$ is closed if and only if it contains all its limit points.
+
+\textbf{Definition:} A point $x$ in a topological space $X$ is called an \textit{adherent point} of a set $A$ if every open set containing $x$ intersects $A$. The set of all adherent points of $A$ is denoted by $\overline{A}$ and is called the \textit{closure} of $A$.
+
+\textbf{Theorem:} The closure of a set $A$ in a topological space $X$ is the smallest closed set containing $A$.
+
+\textbf{Corollary:} A set $A$ in a topological space $X$ is closed if and only if it is equal to its own closure, i.e., $A = \overline{A}$.
+
+\end{document}
+```
+
+This will produce a one-page cheat sheet that includes the relevant definitions, theorems, and corollaries of basic topology. You can compile it using LuaLaTeX.
+

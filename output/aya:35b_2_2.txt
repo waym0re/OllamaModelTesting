@@ -1,0 +1,2 @@
+The 7th Markov number is 48.
+

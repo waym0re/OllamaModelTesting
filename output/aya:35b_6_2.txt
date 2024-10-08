@@ -1,0 +1,46 @@
+Here's an example code snippet that demonstrates the transition of a triangle to a circle using the ManimGL library:
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Triangle()
+
+        # Create a circle with the same center and height as the triangle
+        circle = Circle(radius=triangle.get_height(), color=triangle.get_color())
+
+        # Add labels for the sides of the triangle
+        triangle.label("A = 60^\circ", lag_ratio=0.2)
+        triangle.label("B = 72^\circ", lag_ratio=0.5)
+        triangle.label("C = 48^\circ", lag_ratio=0.8)
+
+        # Add the triangle and circle to the scene
+        self.add(triangle, circle)
+
+        # Move the camera to a better position
+        self.camera.frame.move_to((2, 0, 0))
+
+        # Rotate the triangle around the center to form a circle
+        self.play(
+            Rotate(triangle, angle=PI, about_point=ORIGIN),
+            run_time=3,
+            rate_func=linear,
+        )
+
+        # Fade out the triangle and show only the circle
+        self.play(FadeOut(triangle))
+```
+
+In this code, we first import the necessary modules from ManimGL. We then define a new class TriangleToCircle that inherits from Scene, which is the basic unit of animation in ManimGL.
+
+Inside the construct method, we create a triangle using the Triangle class and a circle with the same center and height as the triangle using the Circle class. We add labels to the sides of the triangle to indicate their angles. Both the triangle and circle are added to the scene using self.add().
+
+We then move the camera to a better position using self.camera.frame.move_to() to get a better view of the animation.
+
+The key part of the animation is the Rotate transformation applied to the triangle. We rotate it by an angle of PI radians (180 degrees) about the origin (CENTER) to transition it into a circle. The run_time and rate_func parameters control the speed and easing of the rotation, respectively.
+
+Finally, we use the FadeOut transformation to fade out the triangle and show only the circle at the end of the animation.
+
+When you run this code using ManimGL, it will generate a video animation that shows the transition of a triangle into a circle with the specified labels and camera movement.
+

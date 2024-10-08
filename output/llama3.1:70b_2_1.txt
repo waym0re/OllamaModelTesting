@@ -1,0 +1,9 @@
+A nice math question!
+
+The Markov numbers are a sequence of integers that satisfy a certain Diophantine equation. They are named after the Russian mathematician Andrey Markov, who studied them in the late 19th century.
+
+According to various sources, including Wikipedia and OEIS (the Online Encyclopedia of Integer Sequences), the first few Markov numbers are:
+
+1, 2, 5, 13, 29, 34, 89
+
+So, the 7th Markov number is indeed **89**.

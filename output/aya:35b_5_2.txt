@@ -1,0 +1,128 @@
+Here is a basic cheat sheet for some of the fundamental concepts, definitions, theorems, and corollaries in topology, using LuaLaTeX:
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{chemmacros}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{Topology Cheat Sheet}
+\author{Your Name}
+\date{}
+
+\maketitle
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\section{Introduction to Topology}
+
+Topology is the branch of mathematics concerned with the properties of geometric shapes that are preserved under continuous deformations, such as stretching and twisting, but not tearing or gluing. It is often called the study of shape and space, and it provides a framework for understanding the connectivity and continuity of mathematical objects.
+
+\subsection{Basic Definitions}
+
+\begin{description}
+\item[Open Set] An open set in a topological space $X$ is a subset $U \subseteq X$ such that for every $x \in U$, there exists an open ball $B(x) \subseteq U$.
+\item[Closed Set] A closed set in a topological space $X$ is a subset $F \subseteq X$ whose complement $X \setminus F$ is open.
+\item[Topological Space] A topological space is an ordered pair $(X, \tau)$ where $X$ is a set and $\tau$ is a collection of subsets of $X$ satisfying the following axioms:
+\begin{itemize}
+\item The empty set $\emptyset$ and the entire space $X$ are in $\tau$.
+\item If $U_1, U_2 \in \tau$, then their intersection $U_1 \cap U_2$ is also in $\tau$.
+\item If $U_1, U_2 \in \tau$, then their union $U_1 \cup U_2$ is also in $\tau$.
+\end{itemize}
+\end{description}
+
+\subsection{Basic Theorems and Corollaries}
+
+\begin{theorem}[Open Set Definition]
+Let $X$ be a topological space. A subset $U \subseteq X$ is open if and only if for every $x \in U$, there exists an open ball $B(x)$ such that $x \in B(x) \subseteq U$.
+\end{theorem}
+
+\begin{corollary}[Closed Set Definition]
+A closed set $F$ is the complement of an open set, i.e., $F = X \setminus U$, where $U$ is open.
+\end{corollary}
+
+\begin{theorem}[Countable Union of Open Sets]
+If $X$ is a topological space and $\{U_n\}$ is a countable collection of open sets, then $\bigcup_{n=1}^{\infty} U_n$ is also open.
+\end{theorem}
+
+\begin{corollary}[Countable Intersection of Closed Sets]
+If $X$ is a topological space and $\{F_n\}$ is a countable collection of closed sets, then $\bigcap_{n=1}^{\infty} F_n$ is also closed.
+\end{corollary}
+
+\section{Continuity and Homeomorphisms}
+
+\subsection{Continuity}
+
+\begin{definition}[Continuous Function]
+Let $X$ and $Y$ be topological spaces, and let $f: X \rightarrow Y$. The function $f$ is continuous if for every open set $U \subseteq Y$, the preimage $f^{-1}(U)$ is open in $X$.
+\end{definition}
+
+\begin{theorem}[Continuous Image of a Compact Set]
+Let $X$ and $Y$ be topological spaces, and let $f: X \rightarrow Y$ be continuous. If $K \subseteq X$ is compact, then $f(K) \subseteq Y$ is compact as well.
+\end{theorem}
+
+\subsection{Homeomorphisms}
+
+\begin{definition}[Homeomorphism]
+Let $X$ and $Y$ be topological spaces. A function $f: X \rightarrow Y$ is a homeomorphism if it is continuous, bijective, and has a continuous inverse.
+\end{definition}
+
+\begin{theorem}[Homeomorphic Spaces]
+If $X$ and $Y$ are homeomorphic, then they have the same topological properties, and any theorem true for one is also true for the other.
+\end{theorem}
+
+\section{Connectedness and Compactness}
+
+\subsection{Connected Spaces}
+
+\begin{definition}[Connected Space]
+A topological space $X$ is connected if it is not the union of two non-empty open disjoint sets. Equivalently, a space is connected if there is a path between any two points in the space.
+\end{definition}
+
+\begin{theorem}[Connected Components]
+Every space can be written as a unique union of maximal connected subspaces, called connected components.
+\end{theorem}
+
+\subsection{Compact Spaces}
+
+\begin{definition}[Compact Space]
+A topological space $X$ is compact if every open covering of $X$ has a finite subcover. Equivalently, a space is compact if it is sequential and Lindel\"of.
+\end{definition}
+
+\begin{theorem}[Compact Subsets of Compact Spaces]
+If $K$ is a compact subset of a topological space $X$, and $U \subseteq X$ is an open set containing $K$, then there exists a finite subcover of $U$ that covers $K$.
+\end{theorem}
+
+\section{Homotopy and Fundamental Group}
+
+\subsection{Homotopy}
+
+\begin{definition}[Homotopic Maps]
+Two continuous maps $f, g: X \rightarrow Y$ are homotopic if there exists a continuous map $H: X \times [0,1] \rightarrow Y$ such that $H(x,0) = f(x)$ and $H(x,1) = g(x)$ for all $x \in X$.
+\end{definition}
+
+\begin{theorem}[Homotopy Invariance]
+If two spaces are homotopic, then they have the same topological properties, and any theorem true for one is also true for the other.
+\end{theorem}
+
+\subsection{Fundamental Group}
+
+\begin{definition}[Fundamental Group]
+The fundamental group of a space $X$, denoted $\pi_1(X)$, is the set of all homotopy classes of loops in $X$ based at a point $x_0 \in X$, with the group operation being concatenation of loops.
+\end{definition}
+
+\begin{theorem}[Fundamental Group Invariance]
+If two spaces are homotopic, then they have isomorphic fundamental groups.
+\end{theorem}
+
+\section{Conclusion}
+
+This cheat sheet provides a brief overview of some of the key concepts, definitions, theorems, and corollaries in topology. Topology is a rich and diverse field, and these are just some of the fundamentals that form the basis for more advanced topics in the subject.
+
+\end{document}
+
+Please note that this cheat sheet only covers basic topology and there are many more advanced topics and results in this field. Additionally, feel free to customize and expand upon this document to suit your specific needs and areas of interest within topology.
+

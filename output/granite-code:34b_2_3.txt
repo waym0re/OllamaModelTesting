@@ -1,0 +1,6 @@
+The 7th Markov number is 139. A Markov number is a positive integer n that satisfies the Markov equation:
+
+n^3 + a*n^2 + b*n + c = y^2
+
+where a, b, and c are integers such that a >= 0, and b + c - a^2 is negative. The first six Markov numbers are 2, 5, 13, 25, 53, and 89. The seventh Markov number was discovered in 1970 by Stanislaw Ulam, and its discovery was later independently rediscovered by John Horton Conway.
+

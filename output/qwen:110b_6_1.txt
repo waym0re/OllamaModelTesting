@@ -1,0 +1,46 @@
+To create an animation using Manim (Mathematical Animation Engine), you would first need to install Manim if you haven't already. You can follow the installation instructions from the official Manim documentation: https://docs.manim.org.cn/en/latest/installation.html
+
+Here's a Python script that uses Manim to demonstrate the transition of a triangle to a circle. This script assumes you are using the new version of Manim, usually referred to as ManimCE (Community Edition).
+
+```python
+from manim import *
+
+class ShapeTransition(Scene):
+    def construct(self):
+        # Create a Triangle
+        triangle = Polygon(LEFT, RIGHT, UP, color=BLUE).scale(0.5)
+        
+        # Create a Circle
+        circle = Circle(color=RED).scale(0.5).set_stroke(width=3)
+        
+        # Add the triangle to the scene
+        self.play(ShowCreation(triangle))
+        
+        # Wait for a second
+        self.wait(1)
+        
+        # Transform the triangle into a circle
+        self.play(Transform(triangle, circle), run_time=2)
+        
+        # You can optionally remove the original shape after transformation
+        # self.remove(triangle)
+        # But since we're transforming it in place, it's not necessary
+        
+        # Wait for the animation to be appreciated
+        self.wait(1)
+
+```
+
+To use this script:
+
+1. Save the code into a file, typically with a `.py` extension (e.g., `shape_transition.py`).
+2. Open your terminal or command prompt, navigate to the directory where you saved the script, and run it using Manim. The command would look like this if Manim is properly set up in your environment:
+
+   ```
+   manim shape_transition.py -pql
+   ```
+
+   `-p` is for preview (opens video in a viewer), `-q` stands for quality (l for low, h for high, etc.), and `-l` selects low-quality rendering which is faster for testing.
+
+Remember to adjust the paths or configurations according to your Manim setup if you have it installed in a custom location. This script creates a simple animation where a triangle appears, then smoothly transforms into a circle.
+

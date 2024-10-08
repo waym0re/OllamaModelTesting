@@ -1,0 +1,22 @@
+A Markov number is a positive integer that is a member of the Markov sequence, which is defined as follows:
+
+M(n) = (a^2 + b^2)/(a + b) for some positive integers a and b such that a - b = 1 and a^2 - b^2 = n.
+
+The first few Markov numbers are 2, 5, 13, 25, 50, 89, ...
+
+The 7th Markov number can be found using the formula:
+
+M(n) = (a^2 + b^2)/(a + b)
+
+For the 7th Markov number, n = 13. We need to find positive integers a and b such that a - b = 1 and a^2 - b^2 = 84 (since 5^2 - 4^2 = 13).
+
+After trying different pairs of positive integers, we find that a = 9 and b = 8 satisfy the conditions:
+
+9^2 - 6^2 = 81 - 36 = 45, which is not equal to 84. However, when we try a = 9 and b = 7:
+
+9^2 - 7^2 = 81 - 49 = 32, which is still not equal to 84. Finally, when we try a = 9 and b = 6:
+
+9^2 - 6^2 = 81 - 36 = 45, which is not equal to 84. However, when we try a = 7 and b = 6:
+
+7^2 - 0^2 = 49 - 0 = 49, which is not equal to 
+

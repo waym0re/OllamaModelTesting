@@ -1,0 +1,67 @@
+Unfortunately, as an AI language model, I cannot directly create or display visual files like PDFs or LaTeX documents here. However, I can provide you with a basic outline and LaTeX code for a cheat-sheet on basic topology using LuaLaTeX. You would need to compile this code locally or through an online LaTeX compiler.
+
+Please copy the following LaTeX code into a `.tex` file and compile it with LuaLaTeX:
+
+```latex
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm} % For mathematical symbols and environments
+\usepackage{luatextra} % For better LuaTeX support
+\usepackage{enumitem} % For customizable lists
+\usepackage[margin=1in]{geometry} % Adjust margins
+
+% Theorem styles
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\begin{document}
+
+\title{Basic Topology Cheat-Sheet}
+\author{Your Name Here}
+\date{\today}
+\maketitle
+
+\section{Basics of Topology}
+
+\begin{definition}[Topological Space]
+A \textbf{topological space} $(X, \tau)$ is a set $X$ together with a collection $\tau$ of subsets of $X$, called open sets, such that:
+1. $\emptyset$ and $X$ are in $\tau$.
+2. The union of any number of sets in $\tau$ is in $\tau$.
+3. The intersection of any finite number of sets in $\tau$ is in $\tau$.
+\end{definition}
+
+\begin{definition}[Open Set]
+A subset $U \subseteq X$ is called \textbf{open} if it belongs to the topology $\tau$.
+\end{definition}
+
+\section{Important Concepts}
+
+\begin{theorem}[Closures and Interiors]
+For a set $A \subseteq X$, let:
+- $\bar{A}$ denote the closure of $A$. 
+- $A^\circ$ denote the interior of $A$.
+Then, for any subset $A$,
+1. $\bar{A}$ is closed.
+2. $(\bar{A})^\circ = A^\circ$.
+3. $A \subseteq \bar{A}$ and $A^\circ \subseteq A$.
+\end{theorem}
+
+\begin{corollary}[Density]
+A set $A \subseteq X$ is dense if and only if $\bar{A} = X$.
+\end{corollary}
+
+\section{Continuity}
+
+\begin{definition}[Continuous Function]
+A function $f: (X, \tau_X) \to (Y, \tau_Y)$ is \textbf{continuous} at a point $x_0 \in X$ if for every open set $V$ in $Y$ containing $f(x_0)$, there exists an open set $U$ in $X$ containing $x_0$ such that $f(U) \subseteq V$. If $f$ is continuous at every point in $X$, it is called continuous.
+\end{definition}
+
+\section{Further Theorems (Examples)}
+
+% Add more definitions, theorems, and corollaries as needed.
+
+\end{document}
+```
+
+Remember that this is a basic template. You can add more definitions, theorems, and corollaries relevant to your study of topology by modifying or extending this code. Compile the LaTeX file using LuaLaTeX in an environment that supports it (e.g., TeX Live with LuaTeX or Overleaf).
+

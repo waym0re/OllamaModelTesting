@@ -1,0 +1,36 @@
+Here is a proof by contradiction of the transcendence of the number $e$. Remember that a number is transcendental if it is not the root of any polynomial with rational coefficients.
+
+Supose that $e$ is not trascendental, then there exists a polynomial with rational coefficients whose root is $e$. We can always suppose that the polynomial is reduced, so we can write it as:
+$$
+P(x) = a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0,
+$$
+with $a_n \neq 0$, and all coefficients $a_i$ rational.
+
+Now, we can consider the function:
+$$
+f(x) = \frac{P(x)}{e^x}
+$$
+
+This is a continuous function, so it is bounded in the interval $[0, \infty)$ (Weierstrass's theorem). In other words, there exists an M such that for all x greater than 0:
+$$
+|f(x)| < M
+$$
+
+But we know that $P(e) = 0$, so:
+$$
+|f(e)| = |\frac{P(e)}{e^e}| = \frac{0}{1} = 0
+$$
+
+This means that for all x greater than 0:
+$$
+|\frac{P(x)}{e^x}| < M
+$$
+or
+$$
+|P(x)| < |e^x|M
+$$
+
+This implies that $|P(x)|$ grows at most linearly, but we know that $|e^x|$ grows exponentially. So for large enough x, the exponential term will be greater than any linear function, which is a contradiction.
+
+Therefore our supposition that $e$ is not trascendental must be false, and so $e$ is trascendental.
+

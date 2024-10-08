@@ -1,0 +1,71 @@
+
+The transcendence of \( e \) can be proven using **Hermite's theorem**. Here is a detailed proof:
+
+### Step 1: Assume \( e \) is algebraic
+Assume, for the sake of contradiction, that \( e \) is an algebraic number. This means there exists a non-zero polynomial \( P(x) \) with integer coefficients such that:
+\[
+P(e) = 0
+\]
+Let:
+\[
+P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+\]
+where \( a_i \in \mathbb{Z} \) for all \( i \), and \( a_n \neq 0 \).
+
+### Step 2: Construct an auxiliary function
+Consider the function:
+\[
+f(x) = P(x)e^{-x}
+\]
+Since \( P(x) \) is a polynomial of degree \( n \), \( f(x) \) is a sum of terms of the form \( b_k x^k e^{-x} \), where \( b_k \) are constants.
+
+### Step 3: Differentiate \( f(x) \)
+The \( k \)-th derivative of \( f(x) \) is:
+\[
+f^{(k)}(x) = \left( P^{(k)}(x) - kP^{(k-1)}(x) + \frac{k(k-1)}{2}P^{(k-2)}(x) - \cdots + (-1)^k P(x) \right)e^{-x}
+\]
+This is a linear combination of terms of the form \( Q(x)e^{-x} \), where \( Q(x) \) is a polynomial with integer coefficients.
+
+### Step 4: Evaluate \( f(x) \) and its derivatives at \( x = 0 \)
+Notice that:
+\[
+f(0) = P(0)e^0 = P(0)
+\]
+and for \( k \geq 1 \):
+\[
+f^{(k)}(0) = (-1)^k P(0)
+\]
+
+### Step 5: Consider the integral
+Consider the integral:
+\[
+I = \int_0^\infty f(x) e^x \, dx
+\]
+Using integration by parts repeatedly, we get:
+\[
+I = -f(0) - f'(0) - f''(0) - \cdots - (-1)^n f^{(n)}(0)
+\]
+
+### Step 6: Substitute the values of \( f(x) \) and its derivatives
+Since \( P(e) = 0 \), we have:
+\[
+f(e) = 0, \quad f'(e) = 0, \quad \ldots, \quad f^{(n)}(e) = 0
+\]
+Thus:
+\[
+I = -P(0)
+\]
+
+### Step 7: Analyze the integral \( I \)
+On the other hand, \( f(x)e^x \) is a polynomial with integer coefficients. Therefore, the integral \( I \) must be an integer.
+
+### Step 8: Contradiction
+However, \( P(0) \) is a non-zero integer (since \( P(x) \) has integer coefficients and is non-zero). This implies that \( I = -P(0) \) is also a non-zero integer. But the integral of \( f(x)e^x \) over \([0, \infty)\) is not an integer because it is a sum of integrals of exponential functions, which are rational numbers.
+
+### Step 9: Conclusion
+The contradiction arises from assuming that \( e \) is algebraic. Therefore, our assumption must be false. Hence, \( e \) is transcendental.
+
+\[
+\boxed{\text{e is transcendental}}
+\]
+

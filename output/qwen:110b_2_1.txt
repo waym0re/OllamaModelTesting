@@ -1,0 +1,17 @@
+The Markov numbers are a sequence of integers that appear in solutions to the Markov Diophantine equation, which is defined as:
+
+\[x^2 + y^2 + z^2 = 3xyz\]
+
+The sequence starts with 1 and each subsequent number is found by solving the equation for positive integer triples (x, y, z), where x ≤ y ≤ z, and then taking the largest number of each triple. The first few Markov numbers are: 1, 2, 5, 13, 29, 70...
+
+The 7th Markov number is part of the next solution set after (1, 5, 13), and it's 169. The sequence progresses as follows with some triples:
+
+\[ (1, 1, 1) \rightarrow 1 \\
+(1, 2, 5) \rightarrow 5 \\
+(1, 5, 13) \rightarrow 13 \\
+(2, 5, 29) \rightarrow 29 \\
+(5, 13, 70) \rightarrow 70 \\
+(13, 29, 169) \rightarrow 169 \]
+
+So, the 7th Markov number is 169.
+

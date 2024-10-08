@@ -1,0 +1,22 @@
+A Markov number is a positive integer m which can be written as the sum of two or more consecutive positive integers starting from 1. It was proposed by the mathematician Andrey Markov.
+
+The first few Markov numbers are 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, …
+
+In Python, we can find nth Markov number using a while loop as follows:
+
+```python
+def markov_number(n):
+    markov_nums = [1]  # initialize with the first markov number.
+    i = 2
+    while len(markov_nums) < n:
+        total = sum([i-j for j in range(i)])
+        if total not in markov_nums:
+            markov_nums.append(total)
+        i += 1
+    return markov_nums[-1]  # return the last number in list as it is the nth one.
+
+print(markov_number(7)) # prints 7th Markov number
+```
+
+This code creates a list of all found Markov numbers and adds to it any new ones that are found by summing consecutive integers starting from 1 until it has found 'n' Markov numbers. It then returns the last number in this list, which is the nth Markov number.
+

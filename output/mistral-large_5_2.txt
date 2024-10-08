@@ -1,0 +1,90 @@
+ Sure! Below is an example of a LaTeX cheat-sheet for basic topology, formatted to be compiled with LuaLaTeX. This document covers some fundamental definitions, theorems, and corollaries in topology.
+
+```latex
+\documentclass{article}
+\usepackage{amsmath, amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+
+% Define theorem styles
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{corollary}{Corollary}
+
+\title{Basic Topology Cheat-Sheet}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Definitions}
+
+\begin{definition}[Topological Space]
+    A \textbf{topological space} is an ordered pair $(X, \tau)$, where $X$ is a set and $\tau$ is a collection of subsets of $X$, satisfying:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\emptyset \in \tau$ and $X \in \tau$.
+        \item The union of any collection of sets in $\tau$ is also in $\tau$.
+        \item The intersection of any finite collection of sets in $\tau$ is also in $\tau$.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}[Open Set]
+    In a topological space $(X, \tau)$, the elements of $\tau$ are called \textbf{open sets}.
+\end{definition}
+
+\begin{definition}[Closed Set]
+    A subset $A$ of a topological space $(X, \tau)$ is \textbf{closed} if its complement $X \setminus A$ is open.
+\end{definition}
+
+\begin{definition}[Neighborhood]
+    A \textbf{neighborhood} of a point $x$ in a topological space $(X, \tau)$ is an open set containing $x$.
+\end{definition}
+
+\section{Theorems}
+
+\begin{theorem}[Basis for a Topology]
+    If $X$ is a nonempty set and $\mathcal{B}$ is a collection of subsets of $X$ such that:
+    \begin{enumerate}[label=(\roman*)]
+        \item For each $x \in X$, there exists at least one basis element containing $x$.
+        \item If $x \in B_1 \cap B_2$ where $B_1, B_2 \in \mathcal{B}$, then there is a $B_3 \in \mathcal{B}$ such that $x \in B_3 \subseteq B_1 \cap B_2$.
+    \end{enumerate}
+    Then $\mathcal{B}$ forms a basis for some topology on $X$.
+\end{theorem}
+
+\begin{theorem}[Closure of a Set]
+    The closure of a set $A$ in a topological space $(X, \tau)$, denoted by $\overline{A}$, is the smallest closed set containing $A$. Equivalently, it is the intersection of all closed sets containing $A$.
+\end{theorem}
+
+\section{Corollaries}
+
+\begin{corollary}[Closure Properties]
+    Let $(X, \tau)$ be a topological space and let $A$ be a subset of $X$. Then:
+    \begin{enumerate}[label=(\roman*)]
+        \item $\overline{\emptyset} = \emptyset$ and $\overline{X} = X$.
+        \item $A \subseteq \overline{A}$.
+        \item If $A \subseteq B$, then $\overline{A} \subseteq \overline{B}$.
+    \end{enumerate}
+\end{corollary}
+
+\begin{corollary}[Intersection of Closed Sets]
+    The intersection of any collection of closed sets is also a closed set.
+\end{corollary}
+
+\end{document}
+```
+
+### Explanation:
+- **Packages**: The document uses `amsmath`, `amsthm`, and `geometry`.
+  - `amsmath` for advanced math typesetting.
+  - `amsthm` for defining theorem styles.
+  - `geometry` to set the margins of the document.
+  - `enumitem` for customizing lists.
+- **Theorem Styles**: Defines styles for definitions, theorems, and corollaries.
+- **Sections**: The cheat-sheet is divided into sections for Definitions, Theorems, and Corollaries.
+- **Content**: Includes basic topological concepts such as topological spaces, open sets, closed sets, neighborhoods, bases for a topology, closure of a set, and properties of closures.
+
+You can compile this document with LuaLaTeX to create your cheat-sheet.
+

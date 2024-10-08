@@ -1,0 +1,8 @@
+Markov numbers are part of a sequence that arises from solutions to the Markov Diophantine equation:
+
+\[ x^2 + y^2 + z^2 = 3xyz \]
+
+These numbers can be generated through a recursive process or by solving the above equation. The first few Markov numbers are 1, 2, 5, 13, 29, 34, 89, and so on.
+
+The 7th Markov number is **89**.
+

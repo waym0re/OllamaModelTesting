@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}[section]
+\newtheorem{rem}[defi]{Remark}
+\newtheorem{expl}[defi]{Example}
+\newtheorem{theo}[defi]{Theorem}
+\newtheorem{coro}[defi]{Corollary}
+\newtheorem{lemma}[defi]{Lemma}
+\numberwithin{defi}{section}
+
+\author{Johannes Fink}
+\title{topology}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Metric spaces}
+\subsection{Basic definitions}
+\begin{defi}
+  Let $(X, d)$ be a non-empty set $X$ with a function
+  \[
+    d : X \times X \rightarrow \mathbb R
+  \]
+  such that
+  \begin{enumerate}
+  \itemsep0em 
+    \item $\forall x,y \in X: d(x, y) \geq 0$
+    \item $\forall x, y \in X: d(x, y) = 0 \iff x = y $
+    \item $\forall x, y, z \in X: d(x, y) + d(y,z) \geq d(x,z)$
+    \item $\forall x, y \in X: d(x, y) = d(y, x)$
+  \end{enumerate}
+  We call $(X, d)$ a \textbf{metric space}.
+\end{defi}
+
+A function $f : (X, d_1) \rightarrow (Y, d_2)$ between two metric spaces is called
+\begin{description}
+  \item[continuous] if
+    \[
+      \forall x \in X \forall \epsilon > 0 \exists \delta > 0:
+        \text{if } d_1(x, y) < \delta \text{ then } d_2(f(x), f(y)) < \epsilon
+    \]
+  \item[uniformly continuous] if
+    \[
+      \forall \epsilon > 0 \exists \delta > 0:
+        \text{if } d_1(x, y) < \delta \text{ then } d_2(f(x), f(y)) < \epsilon
+    \]
+\end{description}
+
+
+\subsection{Some examples}
+\begin{expl}
+  The space $(X, d)$ with $X = \mathbb R$ and $d(x, y) = |x - y|$ is a metric space. We call it the real line $\mathbb R$.
+\end{expl}
+
+\begin{expl}
+  Let $A \subseteq \mathbb R$. Then $(A, d)$ with $d(x,y) = |x-y|$ is a metric space. In this case we also call $A$ a metric space and drop the name of the function $d$.
+\end{expl}
+
+\begin{expl}
+  Let $(X, d)$ be a metric space with metric $d$. Define for any $r \in \mathbb R_{> 0}$
+  \[
+    B_r(x) = \{ y \in X | d(x,y) < r \}
+  \]
+  Then $(B_r(x), d)$ is also a metric space.
+\end{expl}
+
+Let $(X, d)$ be a metric space and $A \subseteq X$. Define the distance between two sets $A, B \subseteq X$ by
+\[
+  d(A, B) = \inf \{d(a, b) | a \in A, b \in B\}
+\]
+
+
+\subsection{Theorems about metric spaces}
+\begin{theo}
+  Let $(X, d)$ be a metric space and let $A \subseteq X$. Then the following are equivalent:
+  \begin{enumerate}
+  \itemsep0em 
+    \item $A$ is closed
+    \item $\forall x \in A \forall \epsilon > 0 \exists y \in A : d(x,y) < \epsilon$
+    \item $\partial A = \overline{A} \setminus \mathring A = \emptyset$
+  \end{enumerate}
+\end{theo}
+
+
+% section metric_spaces (end)
+\end{document}
+

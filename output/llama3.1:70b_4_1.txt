@@ -1,0 +1,48 @@
+Here's a classic proof of the transcendence of e, due to Charles Hermite (1873):
+
+**Theorem:** The number e is transcendental.
+
+**Proof:**
+
+Assume, if possible, that e is algebraic. Then there exist integers a0, a1, ..., an, not all zero, such that:
+
+a0 + a1e + ... + an e^n = 0
+
+We will show that this leads to a contradiction.
+
+**Step 1:** Multiply both sides by e^(-n) to get:
+
+a0 e^(-n) + a1 e^(-(n-1)) + ... + an = 0
+
+**Step 2:** Define the function f(x) as:
+
+f(x) = a0 x^n + a1 x^(n+1) + ... + an x^(2n)
+
+Note that f(x) is a polynomial of degree at most 2n.
+
+**Step 3:** Observe that:
+
+f(1/e) = a0 e^(-n) + a1 e^(-(n-1)) + ... + an = 0
+
+So, f(x) has a root at x = 1/e.
+
+**Step 4:** Using the Taylor series expansion of the exponential function, we can write:
+
+f(1/e) = ∑[k=0 to infinity] (a0/(k+n)! + a1/(k+n+1)! + ... + an/(k+2n)!) e^(-k)
+
+Since f(1/e) = 0, the above expression must equal zero for all k. In particular, taking k = n, we get:
+
+(a0/n! + a1/(n+1)! + ... + an/(2n)!) = 0
+
+This implies that:
+
+a0/n! + a1/(n+1)! + ... + an/(2n)! = - (an+1)/(2n+1)! - ...
+
+where the remaining terms are all multiples of e^(-m) with m > n.
+
+**Step 5:** However, this is impossible since the expression on the left-hand side is a rational number (being a sum of rational numbers), while the right-hand side involves an infinite series that cannot be equal to a rational number. This contradiction shows that our initial assumption - e being algebraic - must be false.
+
+**Conclusion:** Therefore, e is transcendental.
+
+Note: This proof uses some basic properties of polynomials and exponential functions, but it's still a beautiful example of how mathematical arguments can lead to profound conclusions about the nature of numbers!
+

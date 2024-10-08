@@ -1,0 +1,50 @@
+Here is a LaTeX cheat sheet for basic Topology:
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} 
+\usepackage{amssymb}
+
+\title{Basic Topology Cheat Sheet}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+    \maketitle
+  
+    \section{Definitions}
+   \subsection*{Topological Space} A topological space $X$ is a set together with a family $\mathcal{T}$ of subsets of $X$ satisfying the following conditions: \\
+   i) The empty set and $X$ themselves are in $\mathcal{T}$.\\
+   ii) If $U, V \in \mathcal{T}$ then $U \cap V \in \mathcal{T}$ .\\
+   iii) If $\{U_i\}_{i \in I} \in \mathcal{T}$ for all $i \in I$ then $\bigcup_{i \in I} U_i \in \mathcal{T}$.\\
+  
+    \subsection*{Compactness} A topological space is compact if every open cover has a finite subcover.\\
+ 
+    \subsection*{Convergence} A sequence $(x_n)$ in a topological space $X$ converges to the point x iff for any neighborhood $V$ of $x$ there exists an $N$ such that $x_N \in V$ for all $n > N$.\\
+  
+    \section{Theorems and Corollaries}
+     \subsection*{Closure of a Set} The closure of a set $A$ is the minimal closed set containing $A$, denoted by $\text{cl}(A)$ or $A'$. 
+
+     \begin{align*}
+       & A' = \{x : \text{there exists a sequence } (x_n) \in A \text{ such that } x_n \rightarrow x \} \\
+       & \text{ and }\ x \in A'  \\ 
+       &\Rightarrow \text{ there is a limit of a sequence in }A'\,.
+     \end{align*}
+    
+   \subsection*{Compactness} If $X$ is a compact metric space with a countable basis and every open cover of $X$ has a finite subcover, then any Cauchy sequence in X must converge to a point in $X$.
+  
+   \subsection*{Separation axiom} Let $(X, \mathcal{T})$ be a topological space. The space is said to have the separation axiom if for every two distinct points x and y there exist open sets U and V such that x∈U, y∈V and U∩V = Ø.
+  
+   \subsection*{Heine-Borel} A set $K \subseteq \mathbb{R}$ is said to be a compact set if every infinite sequence in K has a subsequence which converges to some point of K.
+  
+   \section{Useful Notations}
+    \begin{itemize}
+      \item $\text{int}(A)$ : interior of $A$, the set of all limit points that are not at the boundary of A. 
+      \item $\text{cl}\ (A)$ or $A'$: closure of $A$, the smallest closed set containing A. 
+      \item $\text{bdry}(A)$ : boundary of $A$, the set of all points of A that have a limit point in the complement of A.  
+    \end{itemize}
+   
+ \end{document}
+
+This cheat sheet should be compiled using a LaTeX engine such as pdflatex or lualatex. If you want to include this document into another one, use the "import" package instead.
+

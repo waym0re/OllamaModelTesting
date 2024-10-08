@@ -1,0 +1,13 @@
+The concept of transcendence pertains to numbers or functions that cannot be expressed as roots of a non-zero polynomial in their domain. In simple terms, it implies these numbers or functions cannot be solved by using only four basic operations (addition, subtraction, multiplication and division), and the extraction of roots (square root, cube root etc.).
+
+To show that 'e' is transcendental, we will demonstrate through contradiction. Suppose 'e' were algebraic; then it would be a root of some non-zero polynomial with integer or rational coefficients. But we can construct a polynomial with integral coefficients where 'e' is not a root. 
+
+We take the equation P(x) = x^n - e^n, where n is any positive integer. This equation has real roots and none of them is equal to 'e' (since e is not a rational number) hence showing that e is transcendental.
+
+In general terms:
+
+If e were algebraic, there would exist integers an,bn,pn !=0 such as en / pn = bn/an.
+This leads us to the contradiction of having two different expressions for the same number 'e'.
+
+So we have shown by contradicting that if e is algebraic then it must be transcendental. This proves the claim about the transcendence of 'e'.
+

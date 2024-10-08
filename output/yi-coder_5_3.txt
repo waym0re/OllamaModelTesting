@@ -1,0 +1,50 @@
+The creation of a lualatex cheat sheet would require LaTeX formatting which is not supported in this text format. However, I can provide you with some common mathematical symbols and their meaning that are typically used in LuaLaTeX. 
+
+- \emph{text}: It makes the text emphasised.
+- \textbf{text}: It makes the text bold.
+- \textit{text}: It makes the text italic.
+- \textrm{text}: It selects the text using a serif font.
+- \textsf{text}: It selects the text using sans serif font.
+- \montreal{text}: It selects the text using Monotype font.
+- \texttt{text}: It makes the text teletype style.
+- \ul{text}: It underlines the text.
+- \overline{text}: It overlines the text.
+
+The common mathematical symbols in LaTeX are:
+
+- \forall, ∀: For all.
+- \in, ∈: Element of.
+- \subseteq, ⊆: Subset or equal to.
+- \cap, ∩ : Intersection.
+- \cup, ∪: Union.
+- \wedge, ∧: Logical and.
+- \neg, ¬: Negation.
+- \rightarrow, →: Right arrow.
+- \Rightarrow: Double right arrow.
+- \iff, ↔: If and only if.
+- \sum, Σ: Summation.
+- \prod, Π: Product.
+- \forall, ∀ : For all.
+- \exists, ∃ : There exists.
+
+The common Greek letters in LaTeX are:
+    \alpha, \beta, \gamma, \delta, \epsilon, \zeta, \eta, \theta, \iota,  
+   \kappa, \lambda, \mu, \nu, \xi, \pi, \rho, \sigma, \tau, \upsilon, \phi, 
+    \chi, \psi, \omega.
+
+You can also define theorems and proofs in LaTeX using the amsthm package. Here are some examples:
+   
+- \begin{theorem}[Name (optional)]
+    Theorem text here.
+  \end{theorem}
+  
+- \begin{corollary}[Name (optional)]
+    Corollary text here.
+  \end{corollary}
+  
+- \begin{proof} [Name (optional)]
+     Proof text here.
+   \end{proof} 
+
+Please note that this cheat sheet assumes you have basic knowledge on how to write a lualatex document and use it for mathematical proofs. It also does not cover all the possible commands in LaTeX or the amsthm package, but only the most common ones. For more advanced topics like the use of certain environments (e.g. proof, lemma) you may have to refer to specific textbooks or online resources.
+

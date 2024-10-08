@@ -1,0 +1,12 @@
+In order to prove that the constant 'e' is transcendental, we will employ a standard mathematical technique called Galois theory. In simpler terms: We will show it can't be solved by a combination of sums, differences, multiplications and divisions, along with roots (square root, cube root etc) using only integers or fractions.
+
+Here are the steps:
+1. Let's assume that 'e' is algebraic, meaning there exists a polynomial equation P(x) such that e is a solution of this equation. 
+2. By Galois theory, the degree of the polynomial must be at least two. In other words, there has to be more than one operation involved in defining 'e'.
+3. Now consider the function F(x) = x - e. If we could find a polynomial equation for this function, say Q(y) = 0, where y is another algebraic number, then e would also be algebraic and we would get a contradiction.
+4. The only way to have Q(y) = 0 would be if F(x) is a rational function, which means that there exists some polynomial R(z) such that F(x) = R(z)/P(z) for all z in the complex numbers.
+5. Now consider the equation P(z)*R'(z) - Q'(z)*R(z) = 0. If this is a valid equation, then it would imply that 'e' could be written as an algebraic combination of roots and we get another contradiction.
+6. This concludes our proof by contradiction. If 'e' were algebraic, then there would have been a way to express it as a ratio of two polynomials, which contradicts the fact that 'e' is transcendental.
+
+However, this proof relies on Galois theory which is a complex area of mathematics. For a more direct approach often used in high school calculus courses, one may use the fact that the derivative of e^x evaluated at x=0 is 1 (the identity function) and show it doesn't have an algebraic root there.
+

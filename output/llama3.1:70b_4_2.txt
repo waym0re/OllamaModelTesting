@@ -1,0 +1,63 @@
+A classic result in number theory!
+
+Here's a proof of the transcendence of e:
+
+**Theorem:** The number e is transcendental.
+
+**Proof:**
+
+We will use a proof by contradiction, assuming that e is algebraic and then deriving a contradiction.
+
+Assume that e is algebraic. Then there exist integers a0, a1, ..., an such that:
+
+a0 + a1e + ... + ane^n = 0
+
+where a0 ≠ 0 (since e is not a root of unity).
+
+Now, we can find a positive integer k such that:
+
+k ≥ |an|, |an-1|, ..., |a1|
+
+Multiply the equation by k! to get:
+
+ka0 + ka1e + ... + kan!e^n = 0
+
+Note that all coefficients are now integers.
+
+**Claim:** We can choose an integer m > n such that:
+
+m ≥ k
+m! is not divisible by any of a0, ..., an
+
+This claim is easily verified: since there are only finitely many prime factors among a0, ..., an, we can simply choose m large enough to be larger than all these primes.
+
+Now, consider the number N = e^m. We have:
+
+|N - (1 + 1/1! + ... + 1/m!)| < 1/(m+1)!
+
+This is because the Taylor series of e^x converges absolutely and uniformly on [0,m]. In particular, we can write:
+
+e^m = (1 + 1/1! + ... + 1/m!) + R_m
+
+where |R_m| < 1/(m+1)!.
+
+Now, multiply our original equation by N to get:
+
+ka0N + ka1Ne + ... + kan!Ne^n = 0
+
+Using the fact that e^m is close to (1 + 1/1! + ... + 1/m!), we can substitute this expression for Ne into the above equation and rearrange terms:
+
+(kan!/(m+1)!)R_m + (smaller terms) = 0
+
+The coefficient of R_m, namely kan!/(m+1)!, is an integer. However, since |R_m| < 1/(m+1)!, we have that the entire left-hand side must be zero.
+
+In particular, this implies that:
+
+kan!/(m+1)! = 0
+
+This is a contradiction, since m was chosen large enough to ensure that (m+1)! is not divisible by any of an, ..., a0.
+
+Therefore, our assumption that e is algebraic must have been false. Hence, e is transcendental.
+
+QED
+

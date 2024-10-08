@@ -1,0 +1,19 @@
+The Markov numbers are a sequence of integers such that the nth Markov number is the sum of the previous m integers, where m=floor(log2n)+1. The first few terms of this sequence are 1, 2, 3, 5, 8, 15, 21, and so on.
+
+To find the 7th Markov number we can write a Python code that calculates the sum of the previous m integers for each number starting from 1 until it finds the 7th term in the sequence:
+
+```python
+def markov_numbers():
+    markov_seq = [1]
+    n = 2
+    while len(markov_seq) < 7:
+        m = bin(n).count('1') + 1
+        if sum(markov_seq[-m:]) == n:
+            markov_seq.append(n)
+        n += 1
+    return markov_seq
+
+print(markov_numbers()[-1])
+```
+This Python code starts with the first term of the sequence (which is always 1), then enters a loop that continues until it has found at least 7 terms in the sequence. In each iteration of this loop, it calculates how many 1's are in the binary representation of the current number (plus one) and checks if the sum of the previous m numbers in the sequence equals the current number. If these conditions are met, then the current number is added to the end of the sequence. The last line of the code prints out the final term found in the sequence.
+

@@ -1,0 +1,29 @@
+To show the transition of a triangle to a circle, we can use Manim's ParametricFunction class, which allows us to create an animation by specifying a mathematical function that describes the shape. In this case, we want to start with a triangle and end up with a circle, so we'll define a function that smoothly transitions between these two shapes.
+
+Here is an example code:
+
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Define the function for a circle
+        def circle_function(t):
+            return (0.5 + 1.2*np.cos(t)) * np.array([
+                np.cos(t),
+                np.sin(t),
+                4 * t / TAU
+            ])
+
+        # Create a triangle
+        triangle = RegularPolygon(n=3, start_angle=-TAU/6)
+        triangle.set_color(RED)
+        triangle.scale(2)
+
+        # Animate the transformation to a circle
+        circle = ParametricFunction(circle_function, t_range=[0, TAU], color=BLUE)
+        self.play(ShowCreation(circle))
+        self.wait()
+```
+
+

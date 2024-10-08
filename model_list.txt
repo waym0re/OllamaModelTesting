@@ -1,0 +1,22 @@
+aya:35b
+codestral
+deepseek-coder-v2
+deepseek-coder-v2:236b
+deepseek-v2.5
+falcon:180b
+gemma2:27b
+granite-code:34b
+llama3.1:70b 
+mdubu/wizard-vicuna_unleashed
+mistral-large
+mistral-nemo
+mistral-small
+mixtral:8x22b
+ollama run deepseek-coder-v2:236b
+qwen:110b 
+qwen2-math:72b
+qwen2-math:72b-instruct-q8_0 
+qwen2.5:72b
+reflection:70b-q4_K_M
+smollm
+yi-coder

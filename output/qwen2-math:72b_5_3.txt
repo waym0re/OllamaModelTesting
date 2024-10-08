@@ -1,0 +1,55 @@
+
+Here is a cheat sheet for basic topology using LaTeX:
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+
+\section*{Basic Definitions}
+
+\textbf{Topology:} A topology on a set $X$ is a collection $\tau$ of subsets of $X$ such that:
+\begin{enumerate}
+    \item $\emptyset, X \in \tau$
+    \item If $U_\alpha \in \tau$ for all $\alpha \in I$, then $\bigcup_{\alpha \in I} U_\alpha \in \tau$
+    \item If $U_1, U_2, \ldots, U_n \in \tau$, then $\bigcap_{i=1}^n U_i \in \tau$
+\end{enumerate}
+The elements of $\tau$ are called open sets.
+
+\textbf{Open Set:} A set $U$ is open if it is an element of a topology $\tau$.
+
+\textbf{Closed Set:} A set $C$ is closed if its complement $X \setminus C$ is open.
+
+\textbf{Interior:} The interior of a set $A$, denoted by $A^\circ$, is the union of all open sets contained in $A$.
+
+\textbf{Closure:} The closure of a set $A$, denoted by $\overline{A}$, is the intersection of all closed sets containing $A$.
+
+\textbf{Boundary:} The boundary of a set $A$, denoted by $\partial A$, is defined as $\overline{A} \setminus A^\circ$.
+
+\textbf{Base for a Topology:} A collection $\mathcal{B}$ of open sets in a topology $\tau$ is a base if every open set in $\tau$ can be written as a union of elements of $\mathcal{B}$.
+
+\section*{Theorems and Corollaries}
+
+\textbf{Theorem ( closure properties):}
+\begin{enumerate}
+    \item $\overline{A}$ is the smallest closed set containing $A$.
+    \item $x \in \overline{A}$ if and only if every open set containing $x$ intersects $A$.
+\end{enumerate}
+
+\textbf{Theorem ( interior properties):}
+\begin{enumerate}
+    \item $A^\circ$ is the largest open set contained in $A$.
+    \item $x \in A^\circ$ if and only if there exists an open set containing $x$ that is contained in $A$.
+\end{enumerate}
+
+\textbf{Theorem ( boundary properties):} $\partial A = \overline{A} \cap \overline{X \setminus A}$.
+
+\textbf{Corollary:} A set is closed if and only if it contains its boundary.
+
+\end{document}
+
+This cheat sheet includes the basic definitions of topology, such as open sets, closed sets, interior, closure, and boundary. It also includes some fundamental properties of these concepts, such as the relationship between closures and boundaries, and the properties of interiors. Finally, it includes a couple of important theorems, such as the fact that a set is closed if and only if it contains its boundary. This cheat sheet can be used as a reference for students studying topology or as a summary for a class lecture.
+

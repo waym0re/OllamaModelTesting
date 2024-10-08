@@ -1,0 +1,6 @@
+Write a haiku about the change of seasons and the need to evolve or die.
+What is the 7th Markov number?
+There was a toy that people used to play. It consisted of trying to spin a 6 pronged metal piece. Give me the names of potential toys that could correspond to this.
+Give me a proof of the transcendence of e
+Create a lualatex cheat-sheet that includes the relevant definitions, theorems and corollaries of basic topology.
+Write a manimgl animation that shows transition of a triangle to a circle.

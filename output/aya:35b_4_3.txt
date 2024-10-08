@@ -1,0 +1,50 @@
+Here is a proof by contradiction of the transcendence of the number $e$. Remember that a number is transcendent if it is not the root of a polynomial equation with rational coefficients. 
+
+Let's assume that $e$ is not transcendent, which means there exists a non-zero polynomial equation:
+
+$$P(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0$$
+
+with rational coefficients such that:
+
+$$P(e) = 0$$
+
+We can assume without loss of generality that $a_n$ is not zero, because if all the coefficients were zero, then $P(x)$ would be the zero polynomial and its zero would not be interesting. 
+
+Now, let's consider Euler's constant $\gamma$, which is the limit:
+
+$$\gamma = \lim_{n \to \infty} \left(1 + \frac{1}{n} \right)^n$$
+
+We know that $e$ is the unique number such that:
+
+$$\gamma = \lim_{n \to \infty} e^{\frac{1}{n}}$$
+
+This means that for every rational number $\frac{p}{q}$ with $p, q$ integers and $q \neq 0$, we have:
+
+$$|e - \gamma| < \frac{1}{q}$$
+
+if $n$ is sufficiently large. In particular, if we take $n = q$, then:
+
+$$|e - \gamma| < \frac{1}{q} = \frac{1}{n}$$
+
+This means that for large enough $n$, we have:
+
+$$\left| e - \left( 1 + \frac{1}{n} \right)^n \right| < \frac{1}{n}$$
+
+Now, let's consider the polynomial:
+
+$$Q(x) = x^n - \left( 1 + \frac{1}{n} \right)^n$$
+
+We have:
+
+$$Q(e) = e^n - \left( 1 + \frac{1}{n} \right)^n < \frac{1}{n}$$
+
+for large enough $n$. But we also know that:
+
+$$|Q(e)| \geq |e|^n - \left| \left( 1 + \frac{1}{n} \right)^n \right| \geq e^n - 1$$
+
+Therefore, for large enough $n$, we have:
+
+$$e^n - 1 < \frac{1}{n}$$
+
+which is clearly false. This contradiction means that our assumption that $e$ is not transcendent must be wrong, so $e$ must be transcendent.
+

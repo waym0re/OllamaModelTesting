@@ -1,0 +1,77 @@
+Here is a LuaLaTeX cheat sheet for basic topology:
+
+**Topology Cheat Sheet**
+
+**Definitions**
+
+* **Topological Space**: A set $X$ together with a collection $\mathcal{T}$ of subsets of $X$, called open sets, satisfying:
+	+ The empty set and $X$ are in $\mathcal{T}$
+	+ The union of any collection of sets in $\mathcal{T}$ is also in $\mathcal{T}$
+	+ The intersection of any two sets in $\mathcal{T}$ is also in $\mathcal{T}$
+* **Closed Set**: A set $A \subseteq X$ whose complement $X \setminus A$ is open
+* **Neighborhood**: An open set containing a point $x \in X$
+* **Interior**: The largest open set contained in a given set $A$, denoted $\mathrm{int}(A)$
+* **Closure**: The smallest closed set containing a given set $A$, denoted $\overline{A}$
+* **Boundary**: The set of points in the closure of $A$ but not in its interior, denoted $\partial A$
+
+**Theorems**
+
+* **Compactness Theorem**: Every open cover of a compact space has a finite subcover
+* **Connectedness Theorem**: A space is connected if and only if it cannot be written as the union of two nonempty disjoint open sets
+* **Urysohn's Lemma**: For any two disjoint closed sets $A$ and $B$, there exists a continuous function $f: X \to [0,1]$ such that $f(A) = 0$ and $f(B) = 1$
+* **Tietze Extension Theorem**: If $X$ is a normal space and $F$ is a closed subset of $X$, then every continuous function from $F$ to $\mathbb{R}$ can be extended to a continuous function on all of $X$
+
+**Corollaries**
+
+* **Heine-Borel Theorem**: A subset of $\mathbb{R}^n$ is compact if and only if it is closed and bounded
+* **Bolzano-Weierstrass Theorem**: Every infinite bounded subset of $\mathbb{R}^n$ has a limit point
+
+**LuaLaTeX Code**
+
+Here is the LuaLaTeX code to generate this cheat sheet:
+```lua
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Topology Cheat Sheet}
+
+\subsection*{Definitions}
+
+\begin{itemize}
+  \item Topological Space: A set $X$ together with a collection $\mathcal{T}$ of subsets of $X$, called open sets, satisfying:
+    \begin{enumerate}
+      \item The empty set and $X$ are in $\mathcal{T}$
+      \item The union of any collection of sets in $\mathcal{T}$ is also in $\mathcal{T}$
+      \item The intersection of any two sets in $\mathcal{T}$ is also in $\mathcal{T}$
+    \end{enumerate}
+  \item Closed Set: A set $A \subseteq X$ whose complement $X \setminus A$ is open
+  \item Neighborhood: An open set containing a point $x \in X$
+  \item Interior: The largest open set contained in a given set $A$, denoted $\mathrm{int}(A)$
+  \item Closure: The smallest closed set containing a given set $A$, denoted $\overline{A}$
+  \item Boundary: The set of points in the closure of $A$ but not in its interior, denoted $\partial A$
+\end{itemize}
+
+\subsection*{Theorems}
+
+\begin{enumerate}
+  \item Compactness Theorem: Every open cover of a compact space has a finite subcover
+  \item Connectedness Theorem: A space is connected if and only if it cannot be written as the union of two nonempty disjoint open sets
+  \item Urysohn's Lemma: For any two disjoint closed sets $A$ and $B$, there exists a continuous function $f: X \to [0,1]$ such that $f(A) = 0$ and $f(B) = 1$
+  \item Tietze Extension Theorem: If $X$ is a normal space and $F$ is a closed subset of $X$, then every continuous function from $F$ to $\mathbb{R}$ can be extended to a continuous function on all of $X$
+\end{enumerate}
+
+\subsection*{Corollaries}
+
+\begin{enumerate}
+  \item Heine-Borel Theorem: A subset of $\mathbb{R}^n$ is compact if and only if it is closed and bounded
+  \item Bolzano-Weierstrass Theorem: Every infinite bounded subset of $\mathbb{R}^n$ has a limit point
+\end{enumerate}
+
+\end{document}
+```
+This code uses the `amsmath` package to format mathematical equations and environments. You can customize the appearance of the cheat sheet by modifying the LuaLaTeX code.
+
+Note: This is just a basic example, you may want to add more definitions, theorems and corollaries, or change the formatting to suit your needs.
+

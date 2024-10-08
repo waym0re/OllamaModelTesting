@@ -1,0 +1,7 @@
+ The Markov numbers are solutions to the Diophantine equation \( x^2 + y^2 + z^2 = 3xyz \), which can also be written as \( x^2 + y^2 + (3yz - x)^2 = 3(3yz - x)yz \). The Markov numbers form a sequence of integers that are generated in a specific order.
+
+The first few Markov numbers are:
+1, 2, 5, 13, 29, 34, 89, ...
+
+To find the 7th Markov number, we look at this sequence. The 7th Markov number is \( \boxed{89} \).
+

@@ -1,0 +1,20 @@
+Here's a proof that e is transcendental using Liouville's theorem and the Lindemann–Weierstrass theorem.
+
+First, let's recall these two theorems:
+
+Liouville's theorem: If α1, α2, ..., αn are algebraic numbers (not all zero) with the property that there exists a positive integer N such that |αi| < N for each i, then there exists a nonzero polynomial P(x) with rational coefficients such that P(α1) = P(α2) = ... = P(αn) = 0.
+
+Lindemann–Weierstrass theorem: If α1, α2, ..., αn are distinct algebraic numbers, then eα1, eα2, ..., eαn are transcendental.
+
+Now, let's prove that e is transcendental using these two theorems:
+
+Assume for contradiction that e is algebraic. Since e > 0, it must be greater than any positive rational number. Let N be a positive integer such that |e - N| < 1. Then, we can choose n distinct rational numbers r1, r2, ..., rn with |ri - N| < 1/n for each i. Since e is algebraic, there exists a nonzero polynomial P(x) with rational coefficients such that P(e) = 0.
+
+Now, consider the numbers αi = ri - e for i = 2, 3, ..., n. These are distinct algebraic numbers since they are differences of distinct rational numbers and e is algebraic. Moreover, we have |αi| < 1/n for each i. By Liouville's theorem, there exists a nonzero polynomial Q(x) with rational coefficients such that Q(α2) = Q(α3) = ... = Q(αn) = 0.
+
+Let R(x) = P(x)Q(x) - P(e)Q(0). Then, R(x) is a nonzero polynomial with rational coefficients and satisfies R(e) = 0 since both P(e) = 0 and Q(αi) = 0 for i = 2, 3, ..., n. Now, define S(x) = R(x + e). Then, S(x) is a nonzero polynomial with rational coefficients and satisfies S(0) = R(e) = 1 since P(e)Q(0) = P(e) = 1 by definition of Q.
+
+However, this contradicts the Lindemann–Weierstrass theorem, which states that eαi are transcendental for distinct algebraic numbers αi. In our case, we have α2, α3, ..., αn as distinct algebraic numbers and e as well. Therefore, S(x) must be transcendental, which contradicts the fact that it has rational coefficients and satisfies S(0) = 1.
+
+Hence, our assumption that e is algebraic must be false, and e is indeed transcendental.
+

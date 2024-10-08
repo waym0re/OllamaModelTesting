@@ -1,0 +1,13 @@
+To prove that 'e' is transcendental, we will use a general theorem in number theory. 
+
+According to this theorem (known as Cebyshev's theorem) if an algebraic number is irrational it must be transcendental. In fact, all the simple roots of a simple polynomial equation are algebraic numbers.
+
+So let us show that e^x is not a solution to any simple, non-zero degree polynomial with rational coefficients. 
+
+If such a polynomial existed, let's say 'p(x)' then we would have: 
+e^x = p(x) 
+=> e = p'(x)/p(x) where p'(x) is the derivative of p(x)
+Since both sides are rational this implies that p'(x) and p(x) must be integers. But this contradicts the fact that e^x is not a rational number because it's not defined in any rational field Q[t]. 
+
+So, since there exists no such polynomial equation 'p(x)', we conclude that 'e' is a transcendental number and an irrational number.
+

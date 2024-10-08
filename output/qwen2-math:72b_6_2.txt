@@ -1,0 +1,31 @@
+
+To create an animation in manim that shows the transition of a triangle to a circle, you can use the following code:
+```python
+from manimlib.imports import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle and a circle
+        triangle = Polygon(
+            np.array([-2, -1.5, 0]),
+            np.array([+2, -1.5, 0]),
+            np.array([0, +2, 0]),
+        )
+        triangle.set_color(BLUE)
+        
+        circle = Circle().set_color(RED)
+
+        # Add the triangle to the scene
+        self.play(ShowCreation(triangle))
+
+        # Transition from a triangle to a circle
+        self.play(Transform(triangle, circle))
+
+        # Keep the circle on the screen
+        self.wait()
+```
+
+This code will create an animation that shows a blue triangle on the screen, which then transitions into a red circle. The `Play` function is used to create animations in manim, and the `ShowCreation` animation shows the creation of a new object on the screen.
+The `Transform` animation is used to smoothly transform one shape into another. In this case, we are transforming the blue triangle into a red circle.
+Finally, the `Wait` function is used to pause the animation for a specified amount of time, allowing the audience to see the final result before it disappears from the screen.
+

@@ -1,0 +1,47 @@
+
+Here is a cheat sheet for basic topology in LuaLaTeX:
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{luatex85}
+
+\begin{document}
+
+\section*{Definitions}
+
+\begin{itemize}
+    \item A \textbf{topological space} is a set $X$ along with a collection $\tau$ of subsets of $X$, called \textbf{open sets}, such that:
+        \begin{itemize}
+            \item The empty set and $X$ are in $\tau$.
+            \item Any union of sets in $\tau$ is also in $\tau$.
+            \item Any finite intersection of sets in $\tau$ is also in $\tau$.
+        \end{itemize}
+    \item A subset $C$ of a topological space $(X, \tau)$ is called \textbf{closed} if its complement $X \setminus C$ is open.
+    \item A point $x \in X$ is a \textbf{limit point} of a subset $A \subseteq X$ if every open set containing $x$ intersects $A$ in a point other than $x$.
+    \item A subset $A$ of a topological space $(X, \tau)$ is \textbf{dense} in $X$ if every point of $X$ is either in $A$ or a limit point of $A$.
+    \item A topological space $(X, \tau)$ is \textbf{T1} if for any two distinct points $x, y \in X$, there exist open sets $U$ and $V$ such that $x \in U$, $y \notin U$, $y \in V$, and $x \notin V$.
+    \item A topological space $(X, \tau)$ is \textbf{Hausdorff} if for any two distinct points $x, y \in X$, there exist disjoint open sets $U$ and $V$ such that $x \in U$ and $y \in V$.
+    \item A topological space $(X, \tau)$ is \textbf{compact} if every open cover of $X$ has a finite subcover.
+\end{itemize}
+
+\section*{Theorems}
+
+\begin{itemize}
+    \item (Heine-Borel Theorem) In $\mathbb{R}^n$, a set is compact if and only if it is closed and bounded.
+    \item (Bolzano-Weierstrass Theorem) Every bounded infinite subset of $\mathbb{R}^n$ has at least one limit point.
+    \item (Tychonoff's Theorem) The product of any collection of compact topological spaces is compact in the product topology.
+\end{itemize}
+
+\section*{Corollaries}
+
+\begin{itemize}
+    \item Every closed subset of a compact space is compact.
+    \item Every continuous image of a compact space is compact.
+    \item A continuous bijection from a compact space to a Hausdorff space is a homeomorphism.
+    \item Every infinite subset of a compact metric space has at least one limit point.
+\end{itemize}
+
+\end{document}
+

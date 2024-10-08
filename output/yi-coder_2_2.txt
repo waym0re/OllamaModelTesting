@@ -1,0 +1,21 @@
+A Markov number is a positive integer m such that the sequence a, a*m, a*m^2, …, a*m^n is a sequence of prime numbers where a and n are given integers. The first few Markov numbers (for a=2) are 1, 2, 4, 6, 30, 60, 150, 300, 900…
+
+We can use Python to solve this problem. Here is the code snippet:
+```python
+import sympy
+
+def markov_number(n):
+    i = 1
+    markov_nums = []
+    while len(markov_nums) < n:
+        if all(sympy.isprime(i*j) for j in range(1, n+1)):
+            markov_nums.append(i)
+        i += 1
+    return markov_nums[-1]
+
+print(markov_number(7))  # prints the 7th Markov number
+```
+This code first defines a function `markov_number()`, which finds all the Markov numbers up to the given input 'n'. Inside this function it uses a while loop to keep generating numbers until we have found 'n' Markov numbers. For each generated number 'i', if every multiple of that number is prime (checked using a list comprehension with `sympy.isprime()`), then that number is added to the list of Markov numbers. The function finally returns the last element in the list (which is thus the nth Markov number).
+
+The actual 7th Markov number can be obtained by running this code. However, it should be noted that these calculations are quite intensive and might take some time for larger inputs due to the prime checking involved.
+

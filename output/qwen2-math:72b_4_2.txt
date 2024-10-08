@@ -1,0 +1,24 @@
+
+To prove that \( e \) (Euler's number) is transcendental, we will use a famous theorem known as **Hermite's Theorem**. This theorem states that \( e^a \) is transcendental for any non-zero algebraic number \( a \).
+
+We will proceed with the proof in several steps:
+
+### Step 1: Understanding Algebraic and Transcendental Numbers
+- **Algebraic Number**: A number is algebraic if it is a root of some non-zero polynomial equation with integer (or equivalently, rational) coefficients.
+- **Transcendental Number**: A number is transcendental if it is not algebraic.
+
+### Step 2: State Hermite's Theorem
+**Hermite's Theorem**: If \( a \) is a non-zero algebraic number, then \( e^a \) is transcendental.
+
+### Step 3: Apply Hermite's Theorem to \( e \)
+- Let \( a = 1 \). Note that 1 is an algebraic number because it is a root of the polynomial equation \( x - 1 = 0 \).
+
+### Step 4: Conclude the Transcendence of \( e \)
+- According to Hermite's Theorem, since 1 is a non-zero algebraic number, \( e^1 = e \) must be transcendental.
+
+Thus, we have shown that \( e \) is transcendental. Therefore, the final result is:
+
+\[
+\boxed{e \text{ is transcendental}}
+\]
+

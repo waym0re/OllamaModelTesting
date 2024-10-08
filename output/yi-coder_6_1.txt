@@ -1,0 +1,19 @@
+Here is an example of how you might implement this in ManimGL:
+
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        triangle = Triangle()
+        circle = Circle()
+
+        self.play(Create(triangle))
+        self.wait(1)
+        self.play(ReplacementTransform(triangle, circle))
+        self.wait(2)
+```
+This code creates a `Triangle` object and then transforms it into a `Circle` object in the animation sequence with Manim's `Create` and `ReplacementTransform` functions respectively. 
+It will first draw the triangle then replace the triangle with a circle. 
+The `wait(n)` function is used to pause the animation for 'n' seconds, before moving on to the next command in the construct method. The final line of code in this scene waits another two seconds after transforming into the circle before finishing the scene.
+

@@ -1,0 +1,59 @@
+The transcendence of e, one of the most famous mathematical constants. Here's a proof:
+
+**Assume e is algebraic**
+
+Suppose that e is an algebraic number, i.e., it satisfies a polynomial equation with rational coefficients. Then there exist integers a1, ..., an and b, not all zero, such that:
+
+a_n e^n + a_(n-1) e^(n-1) + ... + a_1 e + b = 0
+
+We will show that this assumption leads to a contradiction.
+
+**Apply the Taylor series expansion of e^x**
+
+Recall the Taylor series expansion of e^x:
+
+e^x = 1 + x + x^2 / 2! + x^3 / 3! + ...
+
+Substituting x = -1, we get:
+
+e^(-1) = 1 - 1 + 1/2! - 1/3! + ...
+
+Now, multiply the polynomial equation by e^(-n):
+
+a_n + a_(n-1) e^(-1) + ... + a_1 e^(-(n-1)) + b e^(-n) = 0
+
+**Rearrange and apply the triangle inequality**
+
+Rearranging terms, we get:
+
+|b| / n! ≤ |a_n| / (n+1)! + |a_(n-1)| / n! + ... + |a_1| / 2!
+
+Apply the triangle inequality to each term on the right-hand side:
+
+|b| / n! ≤ ∑[k=1 to n] |a_k| / k!
+
+**Derive a contradiction**
+
+Since |b| is a positive integer, we have:
+
+n! ≥ |b|
+
+On the other hand, since e > 2 (in fact, e ≈ 2.718...), we have:
+
+∑[k=1 to n] |a_k| / k! < ∑[k=1 to n] 1/k! < e - 1
+
+Now, choose n such that n > max(|b|, ∑[k=1 to n] |a_k|). This is possible because the sum ∑[k=1 to n] |a_k| grows slower than n!. Then:
+
+n! > |b|
+∑[k=1 to n] |a_k| / k! < e - 1
+
+This leads to a contradiction, since we had:
+
+|b| / n! ≤ ∑[k=1 to n] |a_k| / k!
+
+**Conclusion**
+
+Therefore, our assumption that e is algebraic must be false. In other words, e is transcendental.
+
+Note: This proof is due to Charles Hermite (1873) and was later simplified by Ferdinand von Lindemann (1882).
+

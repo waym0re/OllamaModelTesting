@@ -1,0 +1,25 @@
+% !TEX encoding = UTF-8 Unicode
+\documentclass{article}
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+\usepackage[utf8]{inputenc} % HandleUnicode input encodings
+\usepackage[T1]{fontenc}    % Font encodings
+\usepackage{amsmath}  % Extensive maths support
+\usepackage{amsthm}   % Theorem environments
+\usepackage{float}
+
+\title{\textsc{Lualatex Cheat Sheet}}
+\author{}
+\date{}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+
+\begin{document}
+  \maketitle
+
+  \input{tex/topology}
+\end{document}
+

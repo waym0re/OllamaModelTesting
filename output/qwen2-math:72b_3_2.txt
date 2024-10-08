@@ -1,0 +1,22 @@
+
+1. Spinner
+2. Top
+3. Gyroscope
+4. Compass
+5. Pendulum
+6. Ruler
+7. Pencil sharpener
+8. Keychain
+9. Watch
+10. Phone
+11. Camera
+12. Headphones
+13. Fan
+14. Propeller
+15. Helicopter toy
+16. Airplane toy
+17. Boat toy
+18. Car toy
+19. Train toy
+20. Rocket toy
+

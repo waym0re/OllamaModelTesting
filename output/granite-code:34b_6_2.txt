@@ -1,0 +1,46 @@
+Here is an example ManimGL code for animating the transformation of a equilateral triangle into a circle:
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create an equilateral triangle
+        triangle = RegularPolygon(n=3).set_color(RED)
+        
+        # Create an empty circle
+        circle = Circle().set_color(BLUE)
+        
+        self.play(ShowCreation(triangle))  # Animate the creation of the triangle
+        
+        self.wait()
+        
+        # Scale the triangle to fit inside the circle
+        self.play(Transform(triangle, circle))
+        
+        self.wait()
+```
+In this code, we first import the necessary modules from ManimGL. Then, we define a class `TriangleToCircle` that extends the `Scene` class. Inside the `construct` method, we create an equilateral triangle using the `RegularPolygon` class and set its color to red. We also create an empty circle using the `Circle` class and set its color to blue.
+```python
+        # Create an equilateral triangle
+        triangle = RegularPolygon(n=3).set_color(RED)
+        
+        # Create an empty circle
+        circle = Circle().set_color(BLUE)
+```
+Next, we use the `ShowCreation` animation to animate the creation of the triangle. This will gradually fade in the sides of the triangle.
+```python
+        self.play(ShowCreation(triangle))  # Animate the creation of the triangle
+        
+        self.wait()
+```
+Then, we wait for a short time using the `wait` method.
+After that, we use the `Transform` animation to scale the triangle to fit inside the circle. This will smoothly animate the transformation from a triangle to a circle.
+```python
+        # Scale the triangle to fit inside the circle
+        self.play(Transform(triangle, circle))
+        
+        self.wait()
+```
+Finally, we wait for another short time before the animation ends.
+You can run this code in a ManimGL environment to see the animation of the triangle transforming into a circle.
+

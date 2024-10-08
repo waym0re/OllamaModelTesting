@@ -1,0 +1,60 @@
+%!TEX root = main.tex
+
+\begin{center}
+  \Huge
+  Lualatex cheatsheet
+\end{center}
+
+\section{Mathematics}
+
+% Spacing
+\newcommand{\R}{\mathbb R}
+\renewcommand{\d}{\,\mathrm{d}}
+
+% Logic and set theory
+\renewcommand{\models}{\vDash}
+\newcommand{\st}{\subseteq}
+
+% Algebra
+\renewcommand{\a}{\alpha}
+\newcommand{\e}{\epsilon}
+\newcommand{\lcm}{\operatorname{lcm}}
+\renewcommand{\o}{\omega}
+\renewcommand{\t}{\theta}
+\newcommand{\z}{\zeta}
+\let\bar\overline
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\End}{\text{End}}
+\newcommand{\Inn}{\text{Inn}}
+\renewcommand{\L}{\ Lambda}
+
+% Analysis
+\renewcommand{\i}{\iota}
+\newcommand{\isd}{\overset{*}{\rightharpoonup}}
+\newcommand{\mc}{\mathcal}
+
+% Topology
+\renewcommand{\a}{\alpha}
+\newcommand{\codim}{\text{codim}}
+\newcommand{\diam}{\text{diam}}
+\newcommand{\dist}{\text{dist}}
+\renewcommand{\l}{\lambda}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\supp}{\operatorname{supp}}
+\renewcommand{\t}{\tau}
+
+% Analysis
+\renewcommand{\i}{\imath}
+\newcommand{\isd}{\overset{*}{\rightharpoonup}}
+\let\mc\mathcal
+\renewcommand{\o}{\omicron}
+
+% Logic and set theory
+\renewcommand{\t}{\top}
+\newcommand{\v}{\varnothing}
+
+% Probability
+\newcommand{\Exp}{\mathbb E}
+\newcommand{\Var}{\mathbb V}
+
+

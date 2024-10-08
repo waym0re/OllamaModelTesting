@@ -1,0 +1,73 @@
+Here is a LuaLaTeX cheat sheet for basic topology:
+
+**Topology Cheat Sheet**
+
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\section*{Definitions}
+
+\subsection*{Topological Spaces}
+
+A \emph{topological space} is a pair $(X,\mathcal{T})$ where $X$ is a set and $\mathcal{T}$ is a collection of subsets of $X$ satisfying:
+
+1. $\emptyset,X\in\mathcal{T}$
+2. If $\{U_i\}_{i\in I}\subseteq \mathcal{T}$ then $\bigcup_{i\in I} U_i\in \mathcal{T}$
+3. If $U,V\in \mathcal{T}$ then $U\cap V\in \mathcal{T}$
+
+The elements of $\mathcal{T}$ are called \emph{open sets}.
+
+\subsection*{Neighborhoods and Interior}
+
+Let $(X,\mathcal{T})$ be a topological space. A \emph{neighborhood} of $x\in X$ is any set $N$ such that there exists an open set $U$ with $x\in U\subseteq N$. The \emph{interior} of a set $A$, denoted $\mathrm{int}(A)$, is the largest open set contained in $A$.
+
+\subsection*{Closure and Boundary}
+
+Let $(X,\mathcal{T})$ be a topological space. The \emph{closure} of a set $A$, denoted $\overline{A}$, is the smallest closed set containing $A$. A set $F$ is \emph{closed} if its complement $X\setminus F$ is open. The \emph{boundary} of a set $A$, denoted $\partial A$, is the intersection of the closure and interior of $A$.
+
+**Theorems**
+
+\subsection*{Separation Axioms}
+
+1. (Hausdorff) Let $(X,\mathcal{T})$ be a topological space. For any two distinct points $x,y\in X$, there exist disjoint open sets $U,V$ such that $x\in U$ and $y\in V$.
+2. (Regular) Let $(X,\mathcal{T})$ be a topological space. If $F$ is a closed set and $x\not\in F$, then there exist disjoint open sets $U,V$ such that $x\in U$ and $F\subseteq V$.
+
+\subsection*{Compactness}
+
+Let $(X,\mathcal{T})$ be a topological space. A subset $K$ of $X$ is \emph{compact} if every open cover of $K$ has a finite subcover.
+
+**Corollaries**
+
+\subsection*{Bolzano-Weierstrass Theorem}
+
+Let $(X,\mathcal{T})$ be a topological space and let $\{x_n\}_{n=1}^\infty$ be a sequence in $X$. If $K$ is a compact subset of $X$, then the sequence has at least one limit point in $K$.
+
+**LuaLaTeX Code**
+
+Here's an example LuaLaTeX code that uses the above definitions, theorems and corollaries:
+
+```lua
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+Let $(X,\mathcal{T})$ be a topological space. Suppose we have a sequence $\{x_n\}_{n=1}^\infty$ in $X$. By the Bolzano-Weierstrass Theorem, if $K$ is a compact subset of $X$, then the sequence has at least one limit point in $K$.
+
+Now let's prove that every closed and bounded interval in $\mathbb{R}$ is compact. Let $I=[a,b]$ be such an interval. Suppose we have an open cover $\{U_i\}_{i\in I}$ of $I$. Then, by the Heine-Borel Theorem, $I$ has a finite subcover.
+
+We can write:
+
+```tex
+Let $(X,\mathcal{T})$ be a topological space.
+Suppose we have a sequence $\{x_n\}_{n=1}^\infty$ in $X$. By the Bolzano-Weierstrass Theorem, if $K$ is a compact subset of $X$, then the sequence has at least one limit point in $K$.
+
+Let $I=[a,b]$ be a closed and bounded interval in $\mathbb{R}$. Suppose we have an open cover $\{U_i\}_{i\in I}$ of $I$. Then, by the Heine-Borel Theorem, $I$ has a finite subcover.
+```
+
+Note: This is just a sample LuaLaTeX code and may need to be adjusted based on your specific needs.
+
+I hope this helps! Let me know if you have any questions or need further clarification.
+

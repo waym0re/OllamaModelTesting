@@ -1,0 +1,91 @@
+ Creating a complete LaTeX cheat sheet for basic topology is quite extensive, but I'll provide you with a structured example that covers some fundamental concepts, definitions, theorems, and corollaries in topology using LuaLaTeX. This can be expanded as needed.
+
+```latex
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+
+\title{Basic Topology Cheat Sheet}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction to Topological Spaces}
+
+\begin{definition}[Topological Space]
+    A \textbf{topological space} is an ordered pair $(X, \tau)$, where $X$ is a set and $\tau$ is a collection of subsets of $X$, satisfying the following conditions:
+    1. $\emptyset \in \tau$ and $X \in \tau$.
+    2. The union of any collection of sets in $\tau$ is also in $\tau$.
+    3. The intersection of any finite collection of sets in $\tau$ is also in $\tau$.
+\end{definition}
+
+\begin{definition}[Open Set]
+    A subset $U \subseteq X$ is called an \textbf{open set} if it belongs to the topology $\tau$.
+\end{definition}
+
+\section{Basic Properties of Topological Spaces}
+
+\begin{theorem}[Interior, Closure, and Boundary]
+    Let $(X, \tau)$ be a topological space. For any subset $A \subseteq X$, we define:
+    \begin{itemize}
+        \item The \textbf{interior} of $A$, denoted $\operatorname{Int}(A)$, is the union of all open sets contained in $A$.
+        \item The \textbf{closure} of $A$, denoted $\overline{A}$, is the intersection of all closed sets containing $A$.
+        \item The \textbf{boundary} of $A$, denoted $\partial A$, is $\overline{A} \setminus \operatorname{Int}(A)$.
+    \end{itemize}
+\end{theorem}
+
+\begin{corollary}[Properties of Closure]
+    For any subsets $A, B$ of a topological space $(X, \tau)$, the following properties hold:
+    1. $\overline{\emptyset} = \emptyset$.
+    2. $A \subseteq \overline{A}$.
+    3. $\overline{A \cup B} = \overline{A} \cup \overline{B}$.
+\end{corollary}
+
+\section{Continuous Functions and Homeomorphisms}
+
+\begin{definition}[Continuous Function]
+    Let $(X, \tau_X)$ and $(Y, \tau_Y)$ be topological spaces. A function $f: X \to Y$ is called \textbf{continuous} if for every open set $V \in \tau_Y$, the preimage $f^{-1}(V) \in \tau_X$.
+\end{definition}
+
+\begin{theorem}[Continuity via Closed Sets]
+    A function $f: X \to Y$ is continuous if and only if for every closed set $F \subseteq Y$, the preimage $f^{-1}(F)$ is closed in $X$.
+\end{theorem}
+
+\begin{definition}[Homeomorphism]
+    A function $f: X \to Y$ between topological spaces $(X, \tau_X)$ and $(Y, \tau_Y)$ is called a \textbf{homeomorphism} if it is bijective, continuous, and its inverse $f^{-1}$ is also continuous.
+\end{definition}
+
+\section{Compactness}
+
+\begin{definition}[Compact Space]
+    A topological space $(X, \tau)$ is called \textbf{compact} if every open cover of $X$ has a finite subcover. That is, for any collection $\{U_i\}_{i \in I}$ of open sets such that $X = \bigcup_{i \in I} U_i$, there exists a finite subset $J \subseteq I$ such that $X = \bigcup_{j \in J} U_j$.
+\end{definition}
+
+\begin{theorem}[Heine-Borel Theorem]
+    A subset of $\mathbb{R}^n$ is compact if and only if it is closed and bounded.
+\end{theorem}
+
+\section{Connectedness}
+
+\begin{definition}[Connected Space]
+    A topological space $(X, \tau)$ is called \textbf{connected} if it cannot be written as the disjoint union of two non-empty open sets. That is, there do not exist non-empty open sets $U, V \in \tau$ such that $U \cap V = \emptyset$ and $X = U \cup V$.
+\end{definition}
+
+\begin{theorem}[Intermediate Value Theorem]
+    Let $f: [a, b] \to \mathbb{R}$ be a continuous function on the closed interval $[a, b]$. If $d$ is any real number between $f(a)$ and $f(b)$, then there exists some $c \in (a, b)$ such that $f(c) = d$.
+\end{theorem}
+
+\end{document}
+```
+
+This cheat sheet includes basic definitions, theorems, and corollaries from topology. You can expand this by adding more sections and filling in additional important concepts as needed.
+

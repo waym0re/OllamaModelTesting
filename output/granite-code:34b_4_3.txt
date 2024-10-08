@@ -1,0 +1,20 @@
+I will provide you with a proof by contradiction, using the Lindemann–Weierstrass theorem. I assume that e is algebraic and then show how this leads to a contradiction.
+
+Firstly, let's define some terms:
+
+e = 1 + 1/1! + 2/2! + 3/3! + ...
+
+An algebraic number is any real or complex number that is the root of annon-zero polynomial with rational coefficients. The Lindemann–Weierstrass theorem states that if α1, α2, ..., αn are distinct complex numbers that are linearly independent over the rational field Q, then eα1, eα2, ..., eαn are transcendental numbers.
+
+Now, let's consider the numbers 1, 2, 3, ... . It is clear that these numbers are linearly independent over the rational field Q. Therefore, by the Lindemann–Weierstrass theorem, we know that e1, e2, e3, ... are transcendental numbers.
+
+However, we can construct a polynomial with rational coefficients using these transcendental numbers:
+
+P(x) = (e1 - 1) * (e2 - 2) * (e3 - 6) * ... * (en - n!)
+
+This is a product of linear factors, and so it has degree n. Moreover, P(x) is a polynomial with rational coefficients. Since the transcendental numbers e1, e2, e3, ... are all distinct, we know that none of them can be a root of P(x).
+
+On the other hand, we know that e is an algebraic number. If e were also a root of P(x), then it would contradict our initial assumption that e was transcendental. Therefore, our assumption that e is algebraic must be false, and so e must be a transcendental number.
+
+In conclusion, we have shown by contradiction that the number e is transcendental using the Lindemann–Weierstrass theorem.
+

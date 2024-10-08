@@ -1,0 +1,55 @@
+ Creating an animation using `manim` (or its successor `manimgl`) requires some programming knowledge, particularly in Python and the `manim` library. Below is an example script that demonstrates how you can create an animation showing the transition from a triangle to a circle.
+
+Firstly, ensure you have Manim installed. You can install it using pip:
+```bash
+pip install manim
+```
+
+Then, you can use the following Python script to create the desired animation:
+
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Polygon([0, -1, 0], [1.5, 1, 0], [-1.5, 1, 0])
+
+        # Create a circle with the same color as the triangle
+        circle = Circle(radius=2)
+
+        # Position the objects at the center of the screen
+        triangle.set_fill(BLUE, opacity=0.5)
+        circle.set_fill(BLUE, opacity=0.5)
+
+        # Display the triangle first
+        self.play(Create(triangle))
+
+        # Wait for a short period of time
+        self.wait(1)
+
+        # Transform the triangle into a circle
+        self.play(Transform(triangle, circle), run_time=2)
+
+        # Wait at the end before closing
+        self.wait(1)
+```
+
+### How to Run the Script:
+1. Save the script in a Python file, e.g., `triangle_to_circle.py`.
+2. Open your terminal and navigate to the directory containing the file.
+3. Run the following command to generate the animation:
+   ```bash
+   manim -pql triangle_to_circle.py TriangleToCircle
+   ```
+
+### Explanation of the Code:
+- **Scene Class**: The `TriangleToCircle` class inherits from the `Scene` class, which is a fundamental class in Manim for creating scenes.
+- **Construct Method**: This method is where you define what happens during the scene.
+  - A triangle (`Polygon`) and a circle (`Circle`) are created.
+  - Both shapes are set to have a blue color with some opacity.
+  - The triangle is displayed first using `self.play(Create(triangle))`.
+  - There's a short wait period of one second before the transition begins.
+  - The `Transform` method is used to morph the triangle into the circle over two seconds.
+  - Finally, there’s another short wait at the end before closing.
+

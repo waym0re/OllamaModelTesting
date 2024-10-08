@@ -1,0 +1,75 @@
+Certainly! `ManimGL` is an older version of the Manim library for creating mathematical animations in Python. Below is an example code that demonstrates how to create an animation where a triangle transitions into a circle.
+
+```python
+from manimlib.imports import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Polygon(
+            ORIGIN, 2*UP, 2*RIGHT,
+            color=BLUE,
+            fill_color=BLUE,
+            fill_opacity=0.7
+        )
+
+        # Create a circle with the same area as the triangle
+        circle_area = (1/2) * 2 * 2  # Area of the triangle
+        radius = np.sqrt(circle_area / np.pi)
+        circle = Circle(
+            radius=radius,
+            color=RED,
+            fill_color=RED,
+            fill_opacity=0.7
+        )
+
+        # Position the circle at the same center as the triangle
+        circle.move_to(triangle.get_center())
+
+        # Add the triangle to the scene
+        self.play(FadeIn(triangle))
+        self.wait(1)
+
+        # Transition the triangle into a circle
+        self.play(Transform(triangle, circle), run_time=3)
+        self.wait(2)
+
+```
+
+### Explanation:
+
+1. **Import ManimGL**: We import the necessary classes from `manimlib.imports`.
+2. **Create the Scene Class**: Define a class `TriangleToCircle` that inherits from `Scene`.
+3. **Construct Method**: This method contains the animation logic.
+4. **Create Triangle**:
+   - Use `Polygon` to create a triangle with vertices at `ORIGIN`, `2*UP`, and `2*RIGHT`.
+   - Set the color, fill color, and fill opacity for the triangle.
+5. **Create Circle**:
+   - Calculate the area of the triangle using the formula for the area of a right triangle: \(\frac{1}{2} \times \text{base} \times \text{height}\).
+   - Calculate the radius of the circle that has the same area as the triangle.
+   - Create a `Circle` with the calculated radius and set its color, fill color, and fill opacity.
+6. **Position the Circle**:
+   - Move the circle to the center of the triangle using `move_to`.
+7. **Add Triangle to Scene**:
+   - Use `FadeIn` to fade in the triangle.
+8. **Transition Animation**:
+   - Use `Transform` to morph the triangle into the circle over 3 seconds.
+9. **Wait**:
+   - Add a short wait at the end to keep the final shape on screen.
+
+### Running the Code:
+
+To run this code, you need to have ManimGL installed and set up. You can install it using pip:
+
+```sh
+pip install manimlib
+```
+
+Then, save the code in a file (e.g., `triangle_to_circle.py`) and run it using the following command:
+
+```sh
+manimgl triangle_to_circle.py TriangleToCircle
+```
+
+This will generate and display the animation where a blue triangle transitions into a red circle.
+

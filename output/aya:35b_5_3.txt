@@ -1,0 +1,74 @@
+Here is a basic cheat sheet for topology in LuaLaTeX:
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\restylefloat{figure}
+
+\begin{document}
+
+\title{Topology Cheat Sheet}
+\author{Your Name}
+\date{\today}
+
+\maketitle
+
+\section{Definitions}
+
+\begin{itemize}
+    \item \textbf{Open Set:} A subset $U$ of a topological space $X$ is open if for every point $x \in U$, there exists an open ball $B_x$ such that $x \in B_x \subseteq U$.
+    \item \textbf{Closed Set:} A subset $F$ of a topological space $X$ is closed if its complement $X \setminus F$ is open.
+    \item \textbf{Topological Space:} A set $X$ along with a collection $\tau$ of subsets called open sets, satisfying certain axioms (T1, T2, and T3).
+    \item \textbf{Continuity:} A function $f : X \rightarrow Y$ is continuous at a point $x \in X$ if for every open set $V$ containing $f(x)$, there exists an open set $U$ such that $x \in U$ and $f(U) \subseteq V$.
+    \item \textbf{Connected Space:} A topological space $X$ is connected if it is not the union of two or more disjoint non-empty open sets.
+    \item \textbf{Compact Space:} A topological space $X$ is compact if every open cover of $X$ has a finite subcover.
+\end{itemize}
+
+\section{Theorems and Corollaries}
+
+\begin{itemize}
+    \item \textbf{Theorems on Open and Closed Sets:}
+    \begin{enumerate}
+        \item The intersection of finitely many open sets is open.
+        \item The union of arbitrarily many closed sets is closed.
+        \item If $U$ is open and $F$ is closed in $X$, then $U \cap F$ is closed in $U$ and open in $F$.
+    \end{enumerate}
+    
+    \item \textbf{Continuity Theorems:}
+    \begin{enumerate}
+        \item If $f : X \rightarrow Y$ is continuous at $x \in X$, then $f(x)$ is in the closure of $f^{-1}(f(x))$.
+        \item A function $f : X \rightarrow Y$ is continuous on $X$ if and only if for every closed set $F$ in $Y$, its preimage $f^{-1}(F)$ is closed in $X$.
+    \end{enumerate}
+    
+    \item \textbf{Connectedness Theorems:}
+    \begin{enumerate}
+        \item A topological space $X$ is connected if and only if it cannot be written as the union of two or more disjoint non-empty open sets.
+        \item If $X$ is a connected topological space, then any two points in $X$ can be joined by a path.
+    \end{enumerate}
+    
+    \item \textbf{Compactness Theorems:}
+    \begin{enumerate}
+        \item If $X$ is compact and $f : X \rightarrow Y$ is continuous, then $f(X)$ is compact.
+        \item A finite product of compact spaces is compact.
+        \item A subspace of a compact space is compact if and only if it is closed.
+    \end{enumerate}
+\end{itemize}
+
+\section{Additional Results}
+
+Here are some additional important results in topology:
+
+\begin{itemize}
+    \item Theorems on Separability: A topological space $X$ is separable if it contains a countable dense subset.
+    \item Theorems on Metrizability: A topological space is metrizable if there exists a metric that generates its topology.
+    \item The Fundamental Theorem of Algebra: If $p(z) = a_nz^n + a_{n-1}z^{n-1} + ... + a_1z + a_0$ is a polynomial with complex coefficients, then $p(z)$ has $n$ roots in the complex plane.
+    \item The Jordan-Schönflies Theorem: A simple closed curve in the plane divides it into an interior and exterior region and vice versa.
+\end{itemize}
+
+\end{document}
+
+Remember that this is just a basic cheat sheet, and there are many more definitions, theorems, and corollaries in topology. This document provides a quick reference for some of the most important and commonly used results in the field.
+

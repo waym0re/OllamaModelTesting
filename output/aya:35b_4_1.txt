@@ -1,0 +1,28 @@
+Here is a proof by contradiction of the transcendence of the number $e$, where $e$ is the unique real number such that $f(x) = \displaystyle\sum_{n=0}^{\infty} \frac{1}{n!} x^n$ for all $x \in \mathbb{R}$ (this is known as Euler's number, or the base of the natural logarithm). 
+
+First, recall that if $f(x) = 0$ for some non-zero rational number $x$, then $e$ would be a root of a polynomial with rational coefficients, and thus would be a rational number itself. Therefore, to prove the transcendence of $e$, it suffices to show that $f(x) \neq 0$ for all non-zero rational numbers $x$. 
+
+Supposing that this is not the case, let $p/q$ be a non-zero rational number such that $f(p/q) = 0$, where $p$ and $q$ are relatively prime integers. Then we can write: 
+
+$$0 = f\left(\frac{p}{q}\right) = \sum_{n=0}^{\infty} \frac{1}{n!} \left(\frac{p}{q}\right)^n = \sum_{n=0}^{\infty} \frac{p^n}{n! q^n}$$
+
+Now, let $m$ be the largest integer such that $p^m$ divides $n! q^n$ for all $n$. Then we can rewrite the above equation as: 
+
+$$0 = \sum_{n=0}^{\infty} \frac{a_n p^n}{q^n}$$
+
+where each $a_n$ is a non-zero integer. Letting $r = \max\{n : a_n \neq 0\}$, we can further simplify to get: 
+
+$$0 = \sum_{n=0}^r \frac{a_n p^n}{q^n}$$
+
+Now, since each $a_n$ is a non-zero integer, we can find a prime number $l$ such that $l$ divides $a_r$ but does not divide any of the other coefficients $a_n$ for $n < r$. Then we can write: 
+
+$$0 = \sum_{n=0}^r \frac{b_n p^n}{q^n}$$
+
+where each $b_n$ is an integer, and $l$ divides $b_r$, but does not divide any of the other coefficients. But this implies that: 
+
+$$0 = b_r \cdot \left(\frac{p^r}{q^r}\right) + \sum_{n=0}^{r-1} \frac{b_n p^n}{q^n}$$
+
+Now, since $l$ does not divide any of the coefficients $b_n$ for $n < r$, we must have that $l$ divides $p^r/q^r$. But this implies that $p/q$ is a rational number with an infinite decimal expansion, a contradiction. 
+
+Therefore, our assumption that $f(p/q) = 0$ for some non-zero rational $p/q$ must be false, and thus $f(x) \neq 0$ for all non-zero rational numbers $x$. This proves the transcendence of $e$.
+

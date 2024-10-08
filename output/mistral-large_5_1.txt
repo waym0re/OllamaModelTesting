@@ -1,0 +1,83 @@
+ Certainly! Here's a LaTeX cheat-sheet for basic topology using LuaLaTeX:
+
+```latex
+\documentclass{article}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Theorem environments
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+
+\title{Basic Topology Cheat-Sheet}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Definitions}
+
+\begin{definition}[Topological Space]
+A \textbf{topological space} is an ordered pair $(X, \tau)$, where $X$ is a set and $\tau$ is a collection of subsets of $X$, satisfying the following conditions:
+1. $\emptyset \in \tau$ and $X \in \tau$.
+2. The union of any number of sets in $\tau$ is also in $\tau$.
+3. The intersection of any finite number of sets in $\tau$ is also in $\tau$.
+\end{definition}
+
+\begin{definition}[Open Set]
+In a topological space $(X, \tau)$, the elements of $\tau$ are called \textbf{open sets}.
+\end{definition}
+
+\begin{definition}[Closed Set]
+A subset $A$ of a topological space $(X, \tau)$ is \textbf{closed} if its complement, $X \setminus A$, is open.
+\end{definition}
+
+\begin{definition}[Neighborhood]
+Let $x \in X$. A \textbf{neighborhood} of $x$ is a subset $V$ of $X$ such that there exists an open set $U$ with $x \in U \subseteq V$.
+\end{definition}
+
+\begin{definition}[Limit Point]
+A point $x \in X$ is a \textbf{limit point} (or accumulation point) of a subset $A \subseteq X$ if every neighborhood of $x$ contains at least one point of $A$ different from $x$.
+\end{definition}
+
+\begin{definition}[Closure]
+The \textbf{closure} of a set $A$, denoted $\overline{A}$, is the smallest closed set that contains $A$. It can also be defined as the union of $A$ and its limit points.
+\end{definition}
+
+\section*{Theorems}
+
+\begin{theorem}[Union of Open Sets]
+The arbitrary union of open sets is open.
+\end{theorem}
+
+\begin{theorem}[Intersection of Closed Sets]
+The arbitrary intersection of closed sets is closed.
+\end{theorem}
+
+\begin{theorem}[Characterization of Closure]
+A point $x$ belongs to the closure $\overline{A}$ if and only if every neighborhood of $x$ intersects $A$.
+\end{theorem}
+
+\section*{Corollaries}
+
+\begin{corollary}[Finite Intersection Property]
+The intersection of a finite number of open sets is open.
+\end{corollary}
+
+\begin{corollary}[Complement of Open Set]
+The complement of an open set in $X$ is closed.
+\end{corollary}
+
+\begin{corollary}[Closure and Limit Points]
+A set $A$ is closed if and only if it contains all its limit points.
+\end{corollary}
+
+\end{document}
+```
+
+This cheat-sheet includes basic definitions, theorems, and corollaries in topology using standard LaTeX formatting for mathematical content. You can expand this by adding more relevant topics as needed.
+

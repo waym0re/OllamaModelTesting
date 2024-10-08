@@ -1,0 +1,18 @@
+Markov numbers are integers that appear in solutions to the Markov Diophantine equation:
+
+\[ x^2 + y^2 + z^2 = 3xyz \]
+
+The sequence of Markov numbers starts with \(1, 2, 5, 13, 29, 34, 89, \ldots\).
+
+To find the 7th Markov number, we can list the first few Markov numbers:
+
+1. 1
+2. 2
+3. 5
+4. 13
+5. 29
+6. 34
+7. 89
+
+Thus, the 7th Markov number is **89**.
+

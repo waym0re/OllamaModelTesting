@@ -1,0 +1,39 @@
+Here is a simple example of a Manim animation that shows the transition of a triangle to a circle:
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Polygon(np.array([-1, -1, 0]), np.array([1, -1, 0]), np.array([0, 1, 0]))
+        self.play(ShowCreation(triangle))
+
+        # Animate the transition to a circle
+        for i in range(100):
+            angle = i / 10.0
+            new_vertices = []
+            for j in range(3):
+                x = triangle.get_vertices()[j][0] + (1 - np.cos(angle)) * np.sin(j * 2 * PI / 3)
+                y = triangle.get_vertices()[j][1] + (1 - np.cos(angle)) * np.cos(j * 2 * PI / 3)
+                new_vertices.append(np.array([x, y, 0]))
+            new_polygon = Polygon(*new_vertices)
+            self.play(Transform(triangle, new_polygon))
+
+        # Show the final circle
+        circle = Circle(radius=1)
+        self.play(Replace(triangle, circle))
+        self.wait()
+```
+This code creates a scene with a triangle that morphs into a circle over time. The `ShowCreation` method is used to show the initial triangle, and then a loop is used to animate the transformation of the triangle into a circle by adjusting its vertices.
+
+Here's how it works:
+
+* We start with a triangle created using the `Polygon` class.
+* In each iteration of the loop, we calculate new vertex positions for the triangle based on an angle that increases over time. The new vertex positions are calculated using a combination of sine and cosine functions to create a circular motion.
+* We use the `Transform` method to animate the transformation of the triangle into a circle by replacing its vertices with the new ones.
+* After the loop finishes, we show the final circle using the `Replace` method.
+
+You can customize this animation by adjusting the timing, speed, and other parameters. For example, you could add a `rate_func` parameter to the `Transform` method to control the easing of the animation.
+
+I hope this helps! Let me know if you have any questions or need further assistance.
+

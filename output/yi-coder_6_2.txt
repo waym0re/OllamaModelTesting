@@ -1,0 +1,21 @@
+Here is the Python code you can use:
+
+```python
+from manimlib import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        triangle = Triangulary()
+        circle = Circle()
+        self.play(Write(triangle))
+        self.wait()
+        self.play(ReplacementTransform(triangle, circle))
+        self.wait()
+```
+This code creates a scene where a triangle is first written and then replaced with a circle using the ReplacementTransform function in ManimGL. The 'construct' function controls what happens in the Scene. You might need to adjust it based on your specific requirements or preferences, such as changing the color of the shapes or tweaking the animation speed.
+
+Please note that you will need to install manimlib library (ManimGL) before running this code. You can install it using pip:
+```bash
+pip install manimgl
+```
+

@@ -1,0 +1,82 @@
+Certainly! Proving that \( e \) is transcendental (i.e., not a root of any non-zero polynomial with integer coefficients) is a significant result in mathematics, first proven by Charles Hermite in 1873. The proof involves complex analysis and the use of Liouville's theorem. Here is a high-level overview of the proof:
+
+### Step-by-Step Proof
+
+#### 1. **Preliminary Definitions and Setup**
+
+- Let \( e \) be the base of the natural logarithm, defined by:
+  \[
+  e = \sum_{n=0}^{\infty} \frac{1}{n!}
+  \]
+
+- Assume for contradiction that \( e \) is algebraic. This means there exists a non-zero polynomial \( P(x) \) with integer coefficients such that:
+  \[
+  P(e) = 0
+  \]
+
+#### 2. **Constructing the Polynomial**
+
+- Let \( P(x) \) be of degree \( n \):
+  \[
+  P(x) = a_n x^n + a_{n-1} x^{n-1} + \cdots + a_1 x + a_0
+  \]
+  where \( a_i \) are integers and \( a_n \neq 0 \).
+
+#### 3. **Defining an Auxiliary Function**
+
+- Define the auxiliary function:
+  \[
+  f(x) = \sum_{k=0}^{n} c_k e^{kx}
+  \]
+  where \( c_k \) are integers chosen such that:
+  \[
+  P(e^x) = f(x)
+  \]
+
+#### 4. **Using Complex Analysis**
+
+- Consider the integral:
+  \[
+  I = \int_0^\infty e^{-t} t^n f(t) \, dt
+  \]
+  This integral can be evaluated using integration by parts and properties of \( e^t \).
+
+#### 5. **Evaluating the Integral**
+
+- By evaluating the integral, we obtain:
+  \[
+  I = \sum_{k=0}^{n} c_k \int_0^\infty e^{-t} t^n e^{kt} \, dt
+  \]
+  Simplifying, we get:
+  \[
+  I = \sum_{k=0}^{n} c_k \int_0^\infty e^{-(1-k)t} t^n \, dt
+  \]
+
+- Using the Gamma function \( \Gamma(n+1) = n! \), we have:
+  \[
+  I = \sum_{k=0}^{n} c_k (1-k)^{-(n+1)} n!
+  \]
+
+#### 6. **Contradiction**
+
+- If \( e \) were algebraic, then the integral \( I \) would be an integer multiple of \( n! \). However, by carefully choosing the coefficients \( c_k \), we can show that \( I \) is not an integer.
+
+- Specifically, if \( P(e) = 0 \), then:
+  \[
+  f(1) = 0
+  \]
+  which implies:
+  \[
+  I = 0
+  \]
+
+- This leads to a contradiction because the integral \( I \) cannot be zero for all choices of \( c_k \).
+
+#### 7. **Conclusion**
+
+- Therefore, our assumption that \( e \) is algebraic must be false. Hence, \( e \) is transcendental.
+
+### Final Statement
+
+The proof shows that \( e \) cannot satisfy any non-zero polynomial equation with integer coefficients, thus proving that \( e \) is transcendental. This result was a significant breakthrough in number theory and has far-reaching implications in mathematics.
+

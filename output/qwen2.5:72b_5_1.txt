@@ -1,0 +1,115 @@
+Certainly! Below is a LuaLaTeX cheat sheet for basic topology, including definitions, theorems, and corollaries. This document uses the `amsmath` and `amsthm` packages to format mathematical content and theorems.
+
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% Set up theorem environments
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+
+\title{Basic Topology Cheat Sheet}
+\author{Qwen, Alibaba Cloud}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Introduction to Topology}
+Topology is a branch of mathematics that studies properties of spaces that are preserved under continuous deformations, such as stretching and bending, but not tearing or gluing.
+
+\section{Basic Definitions}
+
+\subsection{Topological Space}
+\begin{definition}[Topological Space]
+A \emph{topological space} is a pair $(X, \tau)$ where $X$ is a set and $\tau$ is a collection of subsets of $X$ (called \emph{open sets}) such that:
+\begin{enumerate}
+    \item The empty set $\emptyset$ and the entire set $X$ are in $\tau$.
+    \item Any union of elements of $\tau$ is in $\tau$.
+    \item Any finite intersection of elements of $\tau$ is in $\tau$.
+\end{enumerate}
+The collection $\tau$ is called a \emph{topology} on $X$.
+\end{definition}
+
+\subsection{Closed Sets}
+\begin{definition}[Closed Set]
+A subset $C$ of a topological space $(X, \tau)$ is \emph{closed} if its complement $X \setminus C$ is open.
+\end{definition}
+
+\subsection{Interior and Closure}
+\begin{definition}[Interior]
+The \emph{interior} of a set $A \subseteq X$, denoted by $\text{int}(A)$, is the union of all open sets contained in $A$.
+\end{definition}
+
+\begin{definition}[Closure]
+The \emph{closure} of a set $A \subseteq X$, denoted by $\overline{A}$, is the intersection of all closed sets containing $A$.
+\end{definition}
+
+\subsection{Neighborhood}
+\begin{definition}[Neighborhood]
+A subset $N$ of a topological space $(X, \tau)$ is a \emph{neighborhood} of a point $x \in X$ if there exists an open set $U$ such that $x \in U \subseteq N$.
+\end{definition}
+
+\section{Basic Theorems and Corollaries}
+
+\subsection{Continuity}
+\begin{theorem}[Continuous Function]
+A function $f: (X, \tau_X) \to (Y, \tau_Y)$ between topological spaces is \emph{continuous} if for every open set $V \in \tau_Y$, the preimage $f^{-1}(V)$ is in $\tau_X$.
+\end{theorem}
+
+\begin{corollary}[Sequential Continuity]
+A function $f: (X, \tau_X) \to (Y, \tau_Y)$ is continuous if and only if for every sequence $(x_n)$ in $X$ that converges to a point $x \in X$, the sequence $(f(x_n))$ converges to $f(x)$.
+\end{corollary}
+
+\subsection{Homeomorphism}
+\begin{definition}[Homeomorphism]
+A function $f: (X, \tau_X) \to (Y, \tau_Y)$ is a \emph{homeomorphism} if it is bijective and both $f$ and its inverse $f^{-1}$ are continuous. Two spaces are \emph{homeomorphic} if there exists a homeomorphism between them.
+\end{definition}
+
+\begin{theorem}[Homeomorphism Theorem]
+If two topological spaces $(X, \tau_X)$ and $(Y, \tau_Y)$ are homeomorphic, then they have the same topological properties.
+\end{theorem}
+
+\subsection{Compactness}
+\begin{definition}[Compact Set]
+A subset $K$ of a topological space $(X, \tau)$ is \emph{compact} if every open cover of $K$ has a finite subcover. That is, for any collection $\{U_i\}_{i \in I}$ of open sets such that $K \subseteq \bigcup_{i \in I} U_i$, there exists a finite subset $J \subseteq I$ such that $K \subseteq \bigcup_{j \in J} U_j$.
+\end{definition}
+
+\begin{theorem}[Heine-Borel Theorem]
+In $\mathbb{R}^n$ with the standard topology, a subset is compact if and only if it is closed and bounded.
+\end{theorem}
+
+\subsection{Connectedness}
+\begin{definition}[Connected Set]
+A topological space $(X, \tau)$ is \emph{connected} if it cannot be written as the union of two disjoint non-empty open sets. A subset $A$ of a topological space is \emph{connected} if it is connected in the subspace topology.
+\end{definition}
+
+\begin{theorem}[Connectedness Theorem]
+If a continuous function maps a connected space to another topological space, then its image is also connected.
+\end{theorem}
+
+\section{Conclusion}
+This cheat sheet provides a concise overview of basic definitions, theorems, and corollaries in topology. For more detailed information and proofs, refer to standard textbooks on topology.
+
+\end{document}
+```
+
+To compile this document, you can use LuaLaTeX. Here are the steps:
+
+1. Save the above content to a file named `topology_cheatsheet.tex`.
+2. Open a terminal or command prompt.
+3. Navigate to the directory where you saved the file.
+4. Run the following command:
+   ```sh
+   lualatex topology_cheatsheet.tex
+   ```
+
+This will generate a PDF document containing your topology cheat sheet.
+

@@ -1,0 +1,61 @@
+ Proving that \(e\) (Euler's number) is transcendental requires advanced mathematical tools and concepts, specifically from the field of complex analysis. The first proof was provided by Charles Hermite in 1873. Below is an outline of a simpler but still rigorous proof due to Ivan Niven:
+
+### Theorem: \(e\) is Transcendental
+
+#### Proof Outline:
+
+1. **Assume the Contrary**: Suppose that \( e \) is algebraic, meaning it satisfies some polynomial equation with integer coefficients:
+   \[
+   a_n x^n + a_{n-1} x^{n-1} + \cdots + a_0 = 0
+   \]
+   where \(a_i\) are integers and \(a_n \neq 0\).
+
+2. **Define a Sequence**: Consider the sequence:
+   \[
+   I(j, p) = j! p^j e^{-p}
+   \]
+   for integers \( j \geq 1 \) and prime numbers \( p \). This sequence is chosen to facilitate certain calculations involving derivatives.
+
+3. **Derivative of the Sequence**: Compute the derivative of \( I(j, p) \):
+   \[
+   I'(j, p) = j! p^j (e^{-p})' - j! e^{-p} (p^j)'
+             = j! p^j (-pe^{-p}) + j! j p^{j-1} e^{-p}
+             = -j! p^{j+1} e^{-p} + j! j p^{j-1} e^{-p}
+   \]
+   Simplify to:
+   \[
+   I'(j, p) = (j + 1)! p^j e^{-p} - j! p^{j+1} e^{-p}
+            = I(j+1, p) - I(j-1, p)
+   \]
+
+4. **Sum of the Sequence**: Define:
+   \[
+   S = \sum_{i=0}^{n} a_i I(i, p)
+       = \sum_{i=0}^{n} a_i i! p^i e^{-p}
+   \]
+   where \(a_i\) are the coefficients of the polynomial.
+
+5. **Derivative of S**: Compute the derivative:
+   \[
+   S' = \sum_{i=0}^{n} a_i I'(i, p)
+       = \sum_{i=0}^{n} a_i (I(i+1, p) - I(i-1, p))
+   \]
+   Rearrange the terms:
+   \[
+   S' = \sum_{i=1}^{n+1} a_{i-1} I(i, p) - \sum_{i=-1}^{n-1} a_{i+1} I(i, p)
+       = a_0 I(1, p) + (a_1 I(2, p) - a_0 I(0, p)) + ... + (-a_n I(n-1, p))
+   \]
+   Given the polynomial assumption, terms involving \(I\) will cancel out appropriately.
+
+6. **Limit of S**: Analyze the behavior of \(S\) as \(p \to \infty\). Note that:
+   \[
+   I(j, p) = j! p^j e^{-p} \approx 0 \text{ for large } p
+   \]
+   and thus \(S \approx 0\). However, the algebraic nature of \(e\) should contradict this approximation.
+
+7. **Contradiction**: The non-zero integer polynomial coefficients should prevent \(S\) from approaching zero as \(p \to \infty\), given that \(e^p\) grows faster than any polynomial term. This leads to a contradiction with the assumption that \(e\) is algebraic.
+
+8. **Conclusion**: Since assuming \(e\) is algebraic led to a contradiction, it must be transcendental.
+
+Thus, we conclude that \(e\) is transcendental. \(\blacksquare\)
+

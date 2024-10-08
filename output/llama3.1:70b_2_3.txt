@@ -1,0 +1,15 @@
+The Markov numbers are a sequence of integers that arise in a variety of mathematical contexts. They can be defined recursively as follows:
+
+M(1) = 1
+M(2) = 2
+M(n) = 3M(n-1)^2 - M(n-2)
+
+Using this recursion, we find:
+
+M(3) = 5
+M(4) = 13
+M(5) = 29
+M(6) = 34
+M(7) = 89
+
+Therefore, the 7th Markov number is 89.

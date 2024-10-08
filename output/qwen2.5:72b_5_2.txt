@@ -1,0 +1,142 @@
+Certainly! Below is a LuaLaTeX cheat sheet for basic topology, including key definitions, theorems, and corollaries. This document is designed to be concise and useful for quick reference.
+
+```latex
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{corollary}[definition]{Corollary}
+
+\title{Basic Topology Cheat Sheet}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Basic Definitions}
+
+\begin{definition}[Topology]
+A \textbf{topology} on a set \( X \) is a collection \( \tau \) of subsets of \( X \), called \textbf{open sets}, such that:
+\begin{enumerate}
+    \item The empty set \( \emptyset \) and the whole set \( X \) are in \( \tau \).
+    \item The union of any collection of sets in \( \tau \) is also in \( \tau \).
+    \item The intersection of any finite number of sets in \( \tau \) is also in \( \tau \).
+\end{enumerate}
+The pair \( (X, \tau) \) is called a \textbf{topological space}.
+\end{definition}
+
+\begin{definition}[Closed Set]
+A subset \( A \) of a topological space \( (X, \tau) \) is \textbf{closed} if its complement \( X \setminus A \) is open.
+\end{definition}
+
+\begin{definition}[Interior and Closure]
+Let \( (X, \tau) \) be a topological space and \( A \subseteq X \).
+\begin{itemize}
+    \item The \textbf{interior} of \( A \), denoted \( \operatorname{int}(A) \), is the union of all open sets contained in \( A \).
+    \item The \textbf{closure} of \( A \), denoted \( \overline{A} \), is the intersection of all closed sets containing \( A \).
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Neighborhood]
+A \textbf{neighborhood} of a point \( x \) in a topological space \( (X, \tau) \) is an open set \( U \) such that \( x \in U \).
+\end{definition}
+
+\section{Key Theorems and Corollaries}
+
+\begin{theorem}[Characterization of Open Sets]
+A subset \( A \subseteq X \) in a topological space \( (X, \tau) \) is open if and only if for every \( x \in A \), there exists an open set \( U \) such that \( x \in U \subseteq A \).
+\end{theorem}
+
+\begin{corollary}[Characterization of Closed Sets]
+A subset \( A \subseteq X \) in a topological space \( (X, \tau) \) is closed if and only if its complement \( X \setminus A \) is open.
+\end{corollary}
+
+\begin{theorem}[Closure Properties]
+Let \( (X, \tau) \) be a topological space and \( A, B \subseteq X \).
+\begin{enumerate}
+    \item \( A \subseteq \overline{A} \)
+    \item \( A \subseteq B \implies \overline{A} \subseteq \overline{B} \)
+    \item \( \overline{\overline{A}} = \overline{A} \)
+    \item \( \overline{A \cup B} = \overline{A} \cup \overline{B} \)
+\end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Interior Properties]
+Let \( (X, \tau) \) be a topological space and \( A, B \subseteq X \).
+\begin{enumerate}
+    \item \( \operatorname{int}(A) \subseteq A \)
+    \item \( A \subseteq B \implies \operatorname{int}(A) \subseteq \operatorname{int}(B) \)
+    \item \( \operatorname{int}(\operatorname{int}(A)) = \operatorname{int}(A) \)
+    \item \( \operatorname{int}(A \cap B) = \operatorname{int}(A) \cap \operatorname{int}(B) \)
+\end{enumerate}
+\end{theorem}
+
+\begin{definition}[Limit Point]
+A point \( x \in X \) is a \textbf{limit point} of a subset \( A \subseteq X \) if every neighborhood of \( x \) contains at least one point of \( A \) different from \( x \).
+\end{definition}
+
+\begin{theorem}[Closure and Limit Points]
+The closure \( \overline{A} \) of a set \( A \) is the union of \( A \) and its limit points.
+\end{theorem}
+
+\begin{definition}[Hausdorff Space]
+A topological space \( (X, \tau) \) is called a \textbf{Hausdorff space} if for any two distinct points \( x, y \in X \), there exist disjoint open sets \( U \) and \( V \) such that \( x \in U \) and \( y \in V \).
+\end{definition}
+
+\begin{theorem}[Properties of Hausdorff Spaces]
+In a Hausdorff space:
+\begin{enumerate}
+    \item Every finite subset is closed.
+    \item The limit of a convergent sequence is unique.
+\end{enumerate}
+\end{theorem}
+
+\section{Common Topologies}
+
+\begin{definition}[Discrete Topology]
+The \textbf{discrete topology} on a set \( X \) is the topology where every subset of \( X \) is open.
+\end{definition}
+
+\begin{definition}[Indiscrete Topology]
+The \textbf{indiscrete topology} (or trivial topology) on a set \( X \) is the topology where the only open sets are \( \emptyset \) and \( X \).
+\end{definition}
+
+\begin{definition}[Subspace Topology]
+Let \( (X, \tau) \) be a topological space and \( Y \subseteq X \). The \textbf{subspace topology} on \( Y \) is the collection of sets of the form \( U \cap Y \), where \( U \in \tau \).
+\end{definition}
+
+\begin{definition}[Product Topology]
+Let \( (X_i, \tau_i) \) be a family of topological spaces indexed by \( i \in I \). The \textbf{product topology} on the Cartesian product \( X = \prod_{i \in I} X_i \) is the coarsest topology such that the projection maps \( \pi_i: X \to X_i \) are continuous.
+\end{definition}
+
+\section{Conclusion}
+This cheat sheet provides a concise overview of basic topology, including key definitions, theorems, and common topologies. For more detailed information, refer to standard textbooks on topology.
+
+\end{document}
+```
+
+### Instructions to Compile
+1. Save the above code to a file with a `.tex` extension, for example, `topology_cheat_sheet.tex`.
+2. Open a terminal or command prompt.
+3. Navigate to the directory where the file is saved.
+4. Run the following commands to compile the document:
+   ```sh
+   lualatex topology_cheat_sheet.tex
+   ```
+5. If necessary, run the above command multiple times to resolve cross-references.
+
+This will generate a PDF file named `topology_cheat_sheet.pdf` which you can open and use as a reference for basic topology concepts.
+

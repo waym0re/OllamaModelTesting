@@ -1,0 +1,67 @@
+Creating an animation that transitions a triangle into a circle involves manipulating the vertices or control points of the shapes over time. Since you've asked for a "manimgl" animation, I'll assume you meant a simple graphical representation using Python with matplotlib, as it's a common tool for creating animations and graphical representations.
+
+Below is a basic example of how to create an animation that morphs a triangle into a circle using Python and matplotlib. This script will generate a sequence of frames where the triangle's vertices are moved towards positions on a circle, effectively transforming the triangle into a circle over time.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+#import matplotlib.animation as animation
+
+# Define initial triangle points
+A = np.array([0, -1])
+B = np.array([-1, 1])
+C = np.array([1, 1])
+
+# Center of the circle (origin for simplicity)
+O = np.array([0, 0])
+
+# Function to calculate new positions as we transition towards a circle
+def interpolate(pA, pB, t):
+    return (1-t)*pA + t*pB
+
+# Circle radius
+r = np.sqrt(A[0]**2 + A[1]**2)
+
+# Number of frames for the animation
+n_frames = 100
+
+# Create a figure and axis object
+fig, ax = plt.subplots()
+
+for i in range(n_frames):
+    # Calculate new positions based on interpolation parameter t
+    t = i / (n_frames - 1)  # Goes from 0 to 1
+    
+    # Target points on the circle for A, B, C
+    target_A = np.array([r*np.cos(2*np.pi/3), r*np.sin(2*np.pi/3)])
+    target_B = np.array([r*np.cos(4*np.pi/3), r*np.sin(4*np.pi/3)])
+    target_C = np.array([r*np.cos(0), r*np.sin(0)])  # Equivalent to (r, 0)
+    
+    new_A = interpolate(A, target_A, t)
+    new_B = interpolate(B, target_B, t)
+    new_C = interpolate(C, target_C, t)
+
+    # Plot the current state of transformation
+    ax.clear()  # Clear previous frame
+    
+    # Set limits so the aspect ratio is equal (to ensure a proper circle representation)
+    ax.set_aspect('equal')
+    
+    # Draw the new shape
+    ax.plot([new_A[0], new_B[0], new_C[0], new_A[0]], 
+           [new_A[1], new_B[1], new_C[1], new_A[1]], 'bo-')
+
+    # Optional: save each frame to create a video later
+    #plt.savefig(f'frame_{i:03}.png')
+    
+    # Show the plot for this frame (optional, comment out if saving frames)
+    plt.pause(0.01)  # Adjust this value to control speed
+
+# Final pause before closing (optional, adjust or remove as needed)
+plt.show()
+```
+
+This script demonstrates how a triangle can be morphed into a circle by interpolating the positions of its vertices towards points on a circle over time. You can adjust the `n_frames` variable to change the number of frames in the animation, which will also affect how smooth the transformation appears.
+
+If you want to save each frame as an image and then compile them into a video, you would uncomment the line that saves each plot (`plt.savefig(f'frame_{i:03}.png')`) and use a tool like FFmpeg to compile those images into a video.
+

@@ -1,0 +1,50 @@
+The transcendence of e can be proven using Liouville's theorem, which states that any algebraic number cannot satisfy a polynomial equation of degree n with coefficients of absolute value bounded by M if n > log(M)/log(b), where b is the base of the logarithm.
+
+The proof of the transcendence of e is based on the continued fraction expansion of e, which is given by:
+
+e = [2; 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, 1, 1, 10, ...]
+
+The proof consists of showing that the continued fraction expansion of e cannot be algebraic. This is done by considering the partial denominators in the continued fraction expansion and using a result from Diophantine approximation.
+
+Let D_n denote the denominator of the n-th convergent of the continued fraction expansion of e, i.e., D_n = d_1d_2...d_n, where [d_1; d_2, d_3, ...] is the simplified continued fraction expansion up to the n-th term.
+
+Define the sequence {a_n} by a_n = (D_{n+1})^2 - D_n. The first few terms of this sequence are:
+
+a_1 = 1, a_2 = 5, a_3 = 77, a_4 = 6897, ...
+
+We claim that the sequence {a_n} is increasing and unbounded. To see this, note that the continued fraction expansion of e satisfies the recurrence relation:
+
+P_{n+1}/Q_{n+1} = (d_{n+1} + P_n/Q_n),
+
+where P_n/Q_n is the n-th convergent and d_n is the n-th partial denominator. Thus, we have:
+
+a_{n+1} = (D_{n+2})^2 - D_{n+1} = ((d_{n+1} + P_n/Q_n)^2)Q_n^2 - Q_{n+1}^2 = (d_{n+1}^2 + 4d_{n+1}P_n/Q_n + P_n^2/Q_n^2)Q_n^2 - Q_{n+1}^2.
+
+Since d_n > 0, it follows that a_{n+1} > (4d_{n+1}P_n/Q_n + P_n^2/Q_n^2)Q_n^2 - Q_{n+1}^2 = P_n^2 - Q_{n+1}^2.
+
+Now, observe that the sequence {a_n} is increasing since a_{n+1} > P_n^2 - Q_{n+1}^2 > P_n^2 - D_{n+1}^2 = a_n. To show that {a_n} is unbounded, we use a result from Diophantine approximation.
+
+Consider the irrational number e - [e]. Since the continued fraction expansion of e is periodic and its period length is greater than 1, it follows that e - [e] is an irrational algebraic number. By Dirichlet's theorem on Diophantine approximation, there exist infinitely many integers p and q such that |(e - [e])q - p| < 1/q^2.
+
+Choose one of these pairs (p, q) with smallest possible value of q. Then we have:
+
+|eq - pe + [e]| < 3/q^2.
+
+Now consider the n-th convergent P_n/Q_n and note that Q_nq = P_n + d_nP_{n-1} + ... + d_1. Since p is an integer, it follows that eq - pe is a rational number of the form m/q^2 for some integer m. Thus, we have:
+
+|m/q^2 - [e]P_n/Q_n| < 3/q^2.
+
+Squaring both sides and multiplying by Q_nq gives:
+
+|mq^2 - P_nm - [e](Q_nq)D_n| < 9.
+
+Since [e] is an integer, it follows that:
+
+|mq^2 - P_nm - (Q_nq)D_n| < 10.
+
+Thus, we have:
+
+a_n = |(D_{n+1})^2 - D_n| > mq^2 - P_nm - (Q_nq)D_n + 9 > mq^2 - 10.
+
+This shows that {a_n} is unbounded, and hence the continued fraction expansion of e cannot be algebraic. Therefore, e must be transcendental.
+

@@ -1,0 +1,23 @@
+Here is an example using the ManimationGL library, which is used for creating 3D animations with Python:
+
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        triangle = Triangle()
+        circle = Circle()
+
+        self.play(Create(triangle))
+        self.wait(1)
+        self.play(ReplacementTransform(triangle, circle))
+        self.wait(1)
+```
+In this code: 
+- We start with importing the necessary module (manimgl) and class (Scene) from ManimGL library.
+- Then we define our animation class `TriangleToCircle` which is a subclass of `Scene`, meaning it's an animation scene.
+- Inside this class, in the `construct()` method that ManimGL automatically calls to build the scene, we create a triangle and play its creation on screen with `self.play(Create(triangle))`. We then wait for 1 second using `self.wait(1)`, and then replace the triangle with a circle using `ReplacementTransform(triangle, circle)`. Again we wait for another second before finishing our animation.
+- You can run this code in your local environment to see how it works. Make sure you have ManimGL installed in your Python environment. 
+  
+Note: The above code will only work on systems which support rendering ManimGL animations.
+

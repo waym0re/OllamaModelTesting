@@ -1,0 +1,29 @@
+Here is an example code that uses the Manim library to create an animation of a triangle transitioning into a circle:
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Triangle()
+
+        # Create a circle and initially make it invisible
+        circle = Circle().set_fill(PINK, opacity=0)
+
+        # Animate the triangle moving and changing color
+        triangle.move_to(UP).set_fill(RED)
+        self.play(ShowCreation(triangle))
+
+        # Animate the circle appearing and growing
+        self.play(ShowCreation(circle), circle.animate.grow())
+
+        # Animate the triangle transforming into the circle
+        self.play(Transform(triangle, circle))
+```
+
+In this code, we first import the necessary modules from Manim. We then define a `TriangleToCircle` class that inherits from the `Scene` class. Inside the `construct` method, we create a triangle and a circle. We initially make the circle invisible by setting its opacity to 0.
+
+We then animate the scene by first showing the creation of the triangle and changing its color to red. Then, we animate the circle appearing and growing in size. Finally, we use the `Transform` animation to smoothly transition the triangle into the circle.
+
+To run this code, make sure you have Manim installed and then execute it in a Python environment. It will generate a video file that shows the transition from a triangle to a circle. You can customize the colors, sizes, and animation speeds to your liking.
+

@@ -1,0 +1,60 @@
+What a massive undertaking!
+
+Here is a LuaLaTeX cheat sheet for basic topology. I'll provide an overview of the most important definitions, theorems, and corollaries. Please note that this is not exhaustive, and you may want to add or modify content to suit your specific needs.
+
+**Topology Cheat Sheet**
+
+** Definitions **
+
+*   **Topological Space**: A set $X$ together with a collection $\mathcal{T}$ of subsets of $X$, satisfying:
+    *   The empty set and $X$ are in $\mathcal{T}$
+    *   The union of any number of sets in $\mathcal{T}$ is also in $\mathcal{T}$
+    *   The intersection of any two sets in $\mathcal{T}$ is also in $\mathcal{T}$
+*   **Open Set**: A set $U$ in a topological space $(X, \mathcal{T})$ such that $U$ is an element of $\mathcal{T}$
+*   **Closed Set**: A set $A$ in a topological space $(X, \mathcal{T})$ such that its complement $X-A$ is open
+*   **Neighborhood**: For any point $x \in X$, a neighborhood of $x$ is an open set containing $x$
+*   **Interior**: The interior of a set $A$, denoted by $\mathrm{int}(A)$, is the largest open subset of $A$
+
+**Theorems and Corollaries**
+
+*   **Separation Axioms**:
+    *   **Hausdorff Property**: For any two distinct points $x$ and $y$ in a topological space $(X, \mathcal{T})$, there exist neighborhoods $U$ of $x$ and $V$ of $y$ such that $U \cap V = \emptyset$
+    *   **Regular Space**: A Hausdorff space where for any closed set $A$ and a point $x \notin A$, there exist disjoint open sets $U$ and $V$ such that $A \subseteq U$ and $x \in V$
+*   **Compactness**:
+    *   **Heine-Borel Theorem**: In $\mathbb{R}^n$, a set is compact if and only if it is closed and bounded
+    *   **Finite Intersection Property**: A topological space $(X, \mathcal{T})$ is compact if and only if every non-empty family of closed subsets with the finite intersection property has a non-empty intersection
+*   **Connectedness**:
+    *   **Connected Space**: A topological space $(X, \mathcal{T})$ such that there do not exist two disjoint, non-empty open sets $U$ and $V$ such that $X = U \cup V$
+    *   **Path-Connected Space**: A connected space where for any two points $x$ and $y$, there exists a continuous function $\gamma: [0,1] \to X$ such that $\gamma(0) = x$ and $\gamma(1) = y$
+
+**Other Important Concepts**
+
+*   **Homeomorphism**: A bijective continuous map between topological spaces with a continuous inverse
+*   **Homotopy**: Two continuous functions $f,g: [a,b] \to X$ are homotopic if there exists a continuous function $H: [0,1] \times [a,b] \to X$ such that $H(0,t) = f(t)$ and $H(1,t) = g(t)$ for all $t$
+*   **Topological Invariants**: Properties of topological spaces preserved under homeomorphisms, such as connectedness or compactness
+
+This cheat sheet should provide a solid foundation for understanding the basics of topology. Of course, there is much more to explore in this beautiful field!
+
+Here's some sample LaTeX code to get you started:
+```latex
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Topology Cheat Sheet}
+
+\begin{document}
+
+\section*{Definitions}
+
+\subsection*{Topological Space}
+A set $X$ together with a collection $\mathcal{T}$ of subsets of $X$, satisfying:
+\begin{itemize}
+    \item The empty set and $X$ are in $\mathcal{T}$
+    \item The union of any number of sets in $\mathcal{T}$ is also in $\mathcal{T}$
+    \item The intersection of any two sets in $\mathcal{T}$ is also in $\mathcal{T}$
+\end{itemize}
+
+% ... and so on ...
+```
+You can add more content, theorems, and examples as needed. Good luck with your topology studies!
+

@@ -1,0 +1,32 @@
+Sure, here is a LaTeX document with some basic definitions and theorems from topology:
+
+\documentclass{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{enumerate} 
+\title{Basic Topology Cheat Sheet} 
+\author{ } 
+\date{} 
+\begin{document} 
+    \maketitle 
+    \section*{Definitions}  
+    \subsection*{Topological Space} A topological space is a set $X$ along with a collection of subsets $\mathcal{T}$ of $X$ satisfying the following properties, known as the axioms of topology: \begin{enumerate}[(i)] \item $\emptyset \in \mathcal{T}$ and $X \in \mathcal{T}$. \item If $U, V \in \mathcal{T}$ then $U \cap V \in \mathcal{T}$. \item If $U_i\in \mathcal{T}$ for all $i \in I$ then $\bigcup_{i \in I} U_i \in \mathcal{T}$ where $I$ is an indexing set. \end{enumerate}
+    
+    \subsection*{Continuous Function} A function $f: X \rightarrow Y$ between two topological spaces $(X, \mathcal{T})$ and $(Y, \mathcal{U})$ is said to be continuous if for every open subset $V \in \mathcal{U}$, the set $f^{-1}(V)$ is an open subset of $X$.
+    
+    \subsection*{Open Set} In a topological space $(X, \mathcal{T})$, a set $U \subset X$ is said to be open if $U \in \mathcal{T}$. 
+    
+    \section*{Theorems and Corollaries}  
+    \subsection*{Urysohn's Theorem} Let $(X, d)$ be a metric space and let $A, B \subset X$ be closed subsets with $A \cap B = \emptyset$. Then there exists a continuous function $f: X \rightarrow [0,1]$ such that $f(a) = 0$ for all $a \in A$ and $f(b) = 1$ for all $b \in B$.
+    \subsection*{Tychonoff's Theorem} Let $\{X_i\}_{i \in I}$ be a collection of topological spaces, where $I$ is a finite or countable index set. Then the product topology on $X = \prod_{i \in I} X_i$ is compact if and only if each $X_i$ is compact.
+    \subsection*{Heine-Borel Theorem} Every open cover of a closed and bounded subset of $\mathbb{R}$ has a finite subcover.
+   
+\end{document}  
+
+You can compile this document with LuaLaTeX to get the final PDF version, after replacing set content with your actual data.
+

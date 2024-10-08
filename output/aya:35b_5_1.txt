@@ -1,0 +1,88 @@
+Here is a LuaLaTeX cheat sheet for basic topology:
+
+\documentclass{article}
+\usepackage{amsmath, amssymb, mathtools}
+\usepackage[a4paper, total={180mm, 276mm}, left=35mm, right=35mm, top=35mm, bottom=35mm]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+{\huge Basic Topology Cheat Sheet}\\[2ex]
+\end{center}
+
+\section*{Definitions}
+
+\begin{itemize}[leftmargin=*, label=\raisebox{0.25ex}{\tiny $\blacktriangleright$}]
+
+\item \textbf{Topological Space:} A set $X$ is a topological space if it is equipped with a topology $\tau$, which is a collection of subsets of $X$ that satisfies certain axioms.
+
+\item \textbf{Topology:} The topology $\tau$ on a set $X$ consists of all subsets of $X$ that are open in $X$. It satisfies the following axioms:
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item The union of any collection of open sets is open.
+\item The intersection of any finite collection of open sets is open.
+\item The empty set and $X$ itself are open.
+\end{enumerate}
+
+\item \textbf{Open Set:} A subset $U$ of a topological space $X$ is open if $U \in \tau$.
+
+\item \textbf{Closed Set:} A subset $F$ of a topological space $X$ is closed if its complement $X \setminus F$ is open.
+
+\item \textbf{Boundary:} The boundary of a set $A$, denoted $\partial A$, is the set of points that are in the closure of $A$ but not in the interior of $A$.
+
+\item \textbf{Interior:} The interior of a set $A$, denoted $\operatorname{int}(A)$, is the largest open subset of $A$.
+
+\item \textbf{Closure:} The closure of a set $A$, denoted $\overline{A}$, is the smallest closed superset of $A$.
+
+\item \textbf{Compact Set:} A set $K$ is compact if every open cover of $K$ has a finite subcover.
+
+\item \textbf{Connected Set:} A set $X$ is connected if there does not exist a separation of $X$, i.e., a pair of disjoint non-empty open sets whose union is $X$.
+
+\end{itemize}
+
+\section*{Theorems and Corollaries}
+
+\begin{itemize}[leftmargin=*, label=\raisebox{0.25ex}{\tiny $\blacktriangleright$}]
+
+\item \textbf{De Morgan's Laws:} For any sets $A$ and $B$,
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item $(A \cup B)^c = A^c \cap B^c$ (Complement of a union)
+\item $(A \cap B)^c = A^c \cup B^c$ (Complement of an intersection)
+\end{enumerate}
+
+\item \textbf{Union and Intersection of Open Sets:} For any collection $\{U_\alpha\}$ of open sets,
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item $\bigcup U_\alpha$ is open.
+\item If $U_\alpha$ are finite, then $\bigcap U_\alpha$ is open.
+\end{enumerate}
+
+\item \textbf{Closure and Interior Properties:} For any sets $A$ and $B$,
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item $\overline{\operatorname{int}(A)} = A$.
+\item $\overline{A \cup B} = \overline{A} \cup \overline{B}$.
+\item If $A$ is open and $B$ is closed, then $A \cap B = \operatorname{int}(B)$.
+\end{enumerate}
+
+\item \textbf{Compactness Theorems:}
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item \textbf{Cantor's Theorem:} Every infinite subset of a compact space has an accumulation point.
+\item \textbf{Heine-Borel Theorem:} A subset of $\mathbb{R}^n$ is compact if and only if it is closed and bounded.
+\end{enumerate}
+
+\item \textbf{Connectedness Theorems:}
+\begin{enumerate}[label=\roman*., ref=\roman*]
+\item \textbf{Baire's Theorem:} If $X$ is a connected, compact metric space, then every open cover of $X$ has a non-empty intersection.
+\item \textbf{Tychné's Theorem:} If $f : X \to Y$ is a continuous function between topological spaces and $X$ is compact, then $f(X)$ is compact in the subspace topology.
+\end{enumerate}
+
+\end{itemize}
+
+\end{document}
+
+This cheat sheet includes some of the fundamental definitions, theorems, and corollaries in basic topology. It can be a useful reference for quickly reviewing key concepts in this field.
+

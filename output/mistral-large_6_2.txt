@@ -1,0 +1,45 @@
+ To create an animation in ManimGL (a library for creating animations using Python) that transitions from a triangle to a circle, you can use the following code:
+
+```python
+from manim import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Polygon([-1, -0.5, 0], [1, -0.5, 0], [0, 1, 0]).set_color(BLUE)
+
+        # Create a circle with the same color as the triangle
+        circle = Circle().set_color(BLUE).scale(0.8)
+
+        # Display the triangle first
+        self.play(Create(triangle))
+
+        # Transition from triangle to circle
+        self.play(Transform(triangle, circle))
+
+        # Keep the final shape on screen for a while
+        self.wait(2)
+```
+
+Here's how this code works:
+1. **Import Manim**: First, import the necessary components from `manim`.
+2. **Define the Scene Class**: Create a class that inherits from `Scene`, where you define what will happen in your animation.
+3. **Create Shapes**: Define a triangle using the `Polygon` method and a circle using the `Circle` method. Ensure both shapes have similar colors for a smooth transition effect.
+4. **Display Triangle**: Use `self.play(Create(triangle))` to display the triangle first.
+5. **Transform Triangle to Circle**: Use `self.play(Transform(triangle, circle))` to smoothly transform the triangle into the circle.
+6. **Wait**: Keep the final shape on screen for a short duration using `self.wait()`.
+
+To run this script:
+1. Save it in a file (e.g., `triangle_to_circle.py`).
+2. Make sure you have Manim installed and set up properly. You can install Manim using pip if you haven't already:
+   ```bash
+   pip install manim
+   ```
+3. Run the script with the Manim command-line interface:
+   ```bash
+   manim -pql triangle_to_circle.py TriangleToCircle
+   ```
+The `-pql` flags stand for "preview", "quality (low)", and "fast render".
+
+This will generate a video file showing the transition from a triangle to a circle, which you can preview immediately.
+

@@ -1,0 +1,55 @@
+ Creating an animation in ManimGL (a fork of Manim) involves several steps, including setting up the scene, defining the shapes, and creating the transformation. Below is an example script that demonstrates how to transform a triangle into a circle using ManimGL:
+
+Firstly, ensure you have ManimGL installed. If not, you can install it via pip:
+```sh
+pip install manimgl
+```
+
+Here's the Python code for the animation:
+
+```python
+from manimlib import *
+
+class TriangleToCircle(Scene):
+    def construct(self):
+        # Create a triangle
+        triangle = Polygon(
+            [-2, 0, 0],         # Vertex 1
+            [2, 0, 0],          # Vertex 2
+            [0, 3.46, 0]        # Vertex 3 (equilateral triangle)
+        ).set_color(BLUE).scale(0.5)
+
+        # Create a circle
+        circle = Circle().set_color(RED).scale(0.8)
+
+        # Display the triangle
+        self.play(ShowCreation(triangle))
+
+        # Wait for 1 second
+        self.wait(1)
+
+        # Transform the triangle into a circle
+        self.play(Transform(triangle, circle), run_time=2)
+
+        # Wait for 1 second
+        self.wait(1)
+```
+
+To render this animation, save it to a file (e.g., `triangle_to_circle.py`) and then execute the following command in your terminal:
+
+```sh
+python triangle_to_circle.py TriangleToCircle -pl
+```
+
+This script does the following:
+1. Imports necessary modules from ManimGL.
+2. Defines a `TriangleToCircle` class that inherits from `Scene`.
+3. Creates an equilateral triangle using the `Polygon` object and scales it down.
+4. Creates a circle using the `Circle` object, colors it red, and scales it appropriately.
+5. Displays the triangle on the screen.
+6. Pauses for 1 second.
+7. Transforms the triangle into a circle over a duration of 2 seconds.
+8. Pauses again for 1 second before ending.
+
+You should see an animation where a blue triangle smoothly transforms into a red circle. Adjust the parameters and colors as needed to fit your specific requirements.
+
